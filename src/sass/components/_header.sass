@@ -1,0 +1,68 @@
+.header
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	color: $white
+	background: $blue
+	text-align: center
+	&__btn-help
+		right: 0
+		+vertical
+		.icon
+			display: inline-block
+			vertical-align: middle
+			fill: currentColor
+			font-size: 30px
+	&__btn-nav
+		left: 0
+		&:before
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			margin: -1px 0 0 -14px
+			border-top: 2px solid $white
+			width: 28px
+		span 
+			position: absolute
+			top: 50%
+			left: 50%
+			margin: -11px 0 0 -14px
+			width: 28px
+			height: 22px
+			&:before,
+			&:after
+				content: ''
+				position: absolute
+				left: 0
+				border-top: 2px solid $white
+				width: 100%
+			&:before
+				top: 0
+			&:after
+				bottom: 0				
+	&__btn-help,
+	&__btn-nav
+		position: absolute
+		top: 0
+		bottom: 0
+		width: 60px
+		color: $white
+		background: none
+		cursor: pointer
+		transition: background 0.25s
+		+hover 
+			background: darken($blue, 10%)
+		&:active
+			background: darken($blue, 10%)
+			box-shadow: inset 2px 2px 6px rgba(0,0,0,.2)
+	&__inner 
+		padding: 0 60px
+		height: 60px
+		+vertical
+	&__title
+		display: inline-block
+		vertical-align: middle
+		+f(18px, 500, 1.2)
+		text-transform: uppercase

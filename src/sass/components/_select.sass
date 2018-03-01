@@ -1,0 +1,61 @@
+.select
+	position: relative
+	text-align: left
+	+nosel
+	&__header
+		position: relative
+		padding: 0 36px 0 12px
+		border: 1px solid $darkGray
+		width: 100%
+		height: 40px
+		background: $white
+		appearance: none
+		transition: border-color 0.25s
+		cursor: pointer
+		transition: border-color 0.25s
+		.select.is-open &
+			border-color: $blue
+	&__value
+		position: relative
+		z-index: 2
+		height: 38px
+		+f(16px, 400, 38px)
+		+text-overflow
+	&__arrow
+		position: absolute
+		z-index: 1
+		top: 50%
+		right: 12px
+		font-size: 8px
+		margin-top: -0.4em
+		transition: transform 0.25s
+		.select.is-open &
+			transform: rotateX(180deg)
+	&__body
+		position: absolute
+		z-index: 20
+		top: 100%
+		left: 0
+		right: 0
+		display: none
+		overflow: auto
+		margin-top: 4px
+		border: 1px solid $darkGray
+		max-height: 200px
+		background: $white
+		.select.is-open &
+			display: block
+	&__option
+		padding: 5px 12px
+		+f(16px, 400, 20px)
+		+text-overflow
+		cursor: pointer
+		transition: color 0.25s, background 0.25s
+		+hover
+			color: $blue
+			background: rgba($black, 0.05)
+		&:active
+			background: rgba($black, 0.1) !important
+		&.is-active
+			color: $white !important
+			background: $blue !important

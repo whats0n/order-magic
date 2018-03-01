@@ -1,0 +1,38 @@
+{% macro icon(i, classList) %}
+<svg class="icon icon-{{i}} {{classList}}"><use xlink:href="img/sprite.svg#icon-{{i}}"></use></svg>
+{% endmacro %}
+
+{% macro group(props) %}
+<div class="form-group {{props.classList}}">
+	<div class="form-group__label"><span>{{props.label}}:</span></div>
+	<div class="form-group__field">
+		{% if props.value %}
+			<div class="form-group__value">
+				{% for item in props.value %}
+					<p>{{item}}</p>
+				{% endfor %}
+			</div>
+		{% elif props.input %}
+			<input type="{{props.input.type or 'text'}}" class="input form-group__input" {{props.input.attrs | safe}}>
+		{% elif props.select %}
+			{{select(props.select)}}
+		{% endif %}
+	</div>
+</div>
+{% endmacro %}
+
+{% macro select(props) %}
+<div class="select" data-select>
+	<div class="select__header">
+		{{icon('angle-down', 'select__arrow')}}
+		<div class="select__value" data-select-value></div>
+	</div>
+	<div class="select__body">
+		<ul class="select__list">
+			{% for item in props.options %}
+				<li class="select__option" data-select-option>{{item}}</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+{% endmacro %}

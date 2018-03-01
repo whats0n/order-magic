@@ -1,0 +1,37 @@
+<!-- begin nav -->
+<input type="checkbox" id="nav-control" style="display: none;">
+<div class="nav">
+	<label for="nav-control" class="nav__overlay"></label>
+	<div class="nav__inner">
+		<label class="nav__header" for="nav-control">
+			{{mixins.icon('angle-left')}}
+			<span>Alpha Wireless</span>
+		</label>
+		<div class="nav__body">
+			<div class="user-data nav__user-data">
+				<div class="user-data__img">
+					{{mixins.icon('user')}}
+				</div>
+				<div class="user-data__content">
+					<div class="user-data__title">John Doe</div>
+					<div class="user-data__subtitle">john123</div>
+				</div>
+			</div>
+			<ul class="nav__list">
+				{% for item in [
+					{ icon: 'cogs', title: 'Settings' },
+					{ icon: 'question', title: 'Help' },
+					{ icon: 'logout', title: 'Logout' }
+				] %}
+					<li class="nav__item">
+						<a href="#" class="nav__link">
+							<span class="nav__icon">{{mixins.icon(item.icon)}}</span>
+							<span class="nav__title">{{item.title}}</span>
+						</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- end nav -->

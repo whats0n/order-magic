@@ -1,0 +1,47 @@
+---
+title: Index page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	<div class="form">
+		{{mixins.group({
+			label: 'Vendor',
+			value: [ 'Alphacomm' ]
+		})}}
+		{{mixins.group({
+			label: 'Select Stores',
+			select: {
+				options: [
+					'Main Store',
+					'Not Main Store',
+					'My Awesome Store',
+					'Other Store',
+					'Store with longlonglonglonglonglonglong name',
+					'Some Store',
+					'What is this?',
+					'Stuff'
+				]
+			}
+		})}}
+		{{mixins.group({
+			label: 'Order #',
+			input: {
+				attrs: 'value="1234"'
+			}
+		})}}
+		{{mixins.group({
+			label: 'Order summary',
+			value: [
+				'Total items: 140',
+				'Total SKU: 30',
+				'Total amount: $700.00'
+			]
+		})}}
+		<div class="form__submit">
+			<button class="btn btn_wide">Send</button>
+		</div>
+	</div>
+
+{% endblock %}

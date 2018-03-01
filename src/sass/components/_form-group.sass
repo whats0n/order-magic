@@ -1,0 +1,37 @@
+.form-group
+	margin: 0 -10px
+	+clr
+	&:not(:last-child)
+		margin-bottom: 15px
+	&__label,
+	&__field
+		float: left
+		padding-left: 10px
+		padding-right: 10px
+	&__label
+		width: 30%
+		height: 40px
+		color: lighten($darkGray, 30%)
+		+vertical
+		text-align: right
+		+sm
+			width: 100%
+			height: auto
+			text-align: left
+		span 
+			display: inline-block
+			vertical-align: middle
+			+sm
+				vertical-align: top
+	&__field
+		width: 70%
+		+sm
+			width: 100%
+	&__label span,
+	&__value
+		+f(16px, 400, 20px)
+	&__value
+		padding-top: 10px
+		padding-bottom: 10px
+		+sm
+			padding-bottom: 0
