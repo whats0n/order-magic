@@ -1,12 +1,10 @@
 <!-- begin nav -->
-<input type="checkbox" id="nav-control" style="display: none;">
-<div class="nav">
-	<label for="nav-control" class="nav__overlay"></label>
-	<div class="nav__inner">
-		<label class="nav__header" for="nav-control">
+<div class="nav" data-modal="modal-nav">
+	<div class="nav__inner" data-modal-container>
+		<button class="nav__header" data-modal-close>
 			{{mixins.icon('angle-left')}}
 			<span>Alpha Wireless</span>
-		</label>
+		</button>
 		<div class="nav__body">
 			<div class="user-data nav__user-data">
 				<div class="user-data__img">

@@ -4,7 +4,7 @@
 
 {% macro group(props) %}
 <div class="form-group {{props.classList}}">
-	<div class="form-group__label"><span>{{props.label}}:</span></div>
+	<div class="form-group__label {{props.labelClassList}}"><span>{{props.label | safe}}:</span></div>
 	<div class="form-group__field">
 		{% if props.value %}
 			<div class="form-group__value">
@@ -16,6 +16,14 @@
 			<input type="{{props.input.type or 'text'}}" class="input form-group__input" {{props.input.attrs | safe}}>
 		{% elif props.select %}
 			{{select(props.select)}}
+		{% elif props.radios %}
+			<div class="form-group__row">
+				{% for item in props.radios %}
+					<div class="form-group__col">
+						{{radio(item)}}
+					</div>
+				{% endfor %}
+			</div>
 		{% endif %}
 	</div>
 </div>
@@ -36,3 +44,13 @@
 	</div>
 </div>
 {% endmacro %}
+
+{% macro radio(props) %}
+<label class="radio">
+	<input type="radio" name="{{props.name}}" {{props.inputAttrs | safe}}>
+	<span class="radio__icon"></span>
+	{% if props.title %}
+		<span class="radio__title">{{props.title}}</span>
+	{% endif %}
+</label>
+{% endmacro	 %}

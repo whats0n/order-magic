@@ -7,12 +7,14 @@ selects.each((i, select) => {
   const otherSelects = selects.not(select);
   const value = select.find('[data-select-value]');
   const options = select.find('[data-select-option]');
+  const active = options.filter(`.${ACTIVE}`).length ? options.filter(`.${ACTIVE}`) : options.first();
 
   value.on('click', e => {
     otherSelects.removeClass(OPEN);
     select.toggleClass(OPEN);
   });
-  value.text(options.first().text());
+  value.text(active.text());
+  active.addClass(ACTIVE);
 
   options.each((i, option) => {
     option = $(option);

@@ -1,0 +1,19 @@
+.section
+	padding: 20px
+	margin-top: 20px
+	background: $white
+	box-shadow: 0 3px 7px 1px rgba($black, 0.1)
+	&__title
+		+f(20px, 500, 1.2)
+		padding-bottom: 15px
+		&:after
+			content: ''
+			display: block
+			margin-top: 7px
+			border-bottom: 2px solid rgba($darkGray, 0.3)
+			max-width: 80px
+	&__footer
+		margin-top: 20px
+		text-align: center
+	&__btn
+		max-width: 200px
