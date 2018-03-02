@@ -16,12 +16,11 @@
 		<span></span>
 	</button> <button class="header__btn-help">
 		
-<svg class="icon icon-question "><use xlink:href="img/sprite.svg#icon-question"></use></svg>
+<svg class="icon icon-question-option "><use xlink:href="img/sprite.svg#icon-question-option"></use></svg>
 
 	</button>
       <div class="header__inner">
-        <div class="header__title">Order Magic</div>
-      </div>
+        <div class="header__title">Order Magic By</div> <img src="img/b2b-white.svg" alt="B2BSoft" class="header__logo"> </div>
     </header>
     <!-- end header -->
     <!-- begin nav -->
@@ -30,32 +29,30 @@
 			
 <svg class="icon icon-angle-left "><use xlink:href="img/sprite.svg#icon-angle-left"></use></svg>
 
-			<span>Alpha Wireless</span>
+			<strong>Alpha Wireless</span>
+			<span class="user-data__subtitle">Access Code: 12345</span>
 		</button>
         <div class="nav__body">
           <div class="user-data nav__user-data">
-            <div class="user-data__img"> <svg class="icon icon-user "><use xlink:href="img/sprite.svg#icon-user"></use></svg> </div>
-            <div class="user-data__content">
-              <div class="user-data__title">John Doe</div>
-              <div class="user-data__subtitle">john123</div>
-            </div>
+            <div class="user-data__title">John Doe</div>
+            <div class="user-data__subtitle">john123</div>
           </div>
           <ul class="nav__list">
             <li class="nav__item"> <a href="#" class="nav__link">
 							<span class="nav__icon">
-<svg class="icon icon-cogs "><use xlink:href="img/sprite.svg#icon-cogs"></use></svg>
+<svg class="icon icon-gear-option "><use xlink:href="img/sprite.svg#icon-gear-option"></use></svg>
 </span>
 							<span class="nav__title">Settings</span>
 						</a> </li>
             <li class="nav__item"> <a href="#" class="nav__link">
 							<span class="nav__icon">
-<svg class="icon icon-question "><use xlink:href="img/sprite.svg#icon-question"></use></svg>
+<svg class="icon icon-question-option "><use xlink:href="img/sprite.svg#icon-question-option"></use></svg>
 </span>
 							<span class="nav__title">Help</span>
 						</a> </li>
             <li class="nav__item"> <a href="#" class="nav__link">
 							<span class="nav__icon">
-<svg class="icon icon-logout "><use xlink:href="img/sprite.svg#icon-logout"></use></svg>
+<svg class="icon icon-logout-mark "><use xlink:href="img/sprite.svg#icon-logout-mark"></use></svg>
 </span>
 							<span class="nav__title">Logout</span>
 						</a> </li>
@@ -99,7 +96,7 @@
         </div>
         <div class="form-group ">
           <div class="form-group__label "><span>Order #:</span></div>
-          <div class="form-group__field"> <input type="text" class="input form-group__input" value="1234"> </div>
+          <div class="form-group__field"> <input type="text" class="input form-group__input" value="1234" readonly> </div>
         </div>
         <div class="form-group ">
           <div class="form-group__label "><span>Order summary:</span></div>
@@ -111,9 +108,13 @@
             </div>
           </div>
         </div>
-        <div class="form__submit"> <button class="btn btn_wide form__btn" type="submit">Send</button> <button class="btn-icon form__btn-icon" type="button" data-modal-control="modal-info">
+        <div class="form__submit form__submit_multiple"> <button class="btn btn_wide form__btn" type="submit">Send</button> <button class="btn-icon form__btn-icon" type="button" data-modal-control="modal-info">
 				
-<svg class="icon icon-attention btn-icon__icon"><use xlink:href="img/sprite.svg#icon-attention"></use></svg>
+<svg class="icon icon-information btn-icon__icon"><use xlink:href="img/sprite.svg#icon-information"></use></svg>
+
+			</button> <button class="btn-icon btn-icon_red form__btn-icon" type="button" data-modal-control="modal-info" hidden>
+				
+<svg class="icon icon-warning btn-icon__icon"><use xlink:href="img/sprite.svg#icon-warning"></use></svg>
 
 			</button> </div>
       </form>
