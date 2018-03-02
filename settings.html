@@ -66,57 +66,88 @@
     <!-- end nav -->
     <!-- BEGIN content -->
     <div class="container">
-      <form action="/" class="form">
-        <div class="form-group ">
-          <div class="form-group__label "><span>Vendor:</span></div>
-          <div class="form-group__field">
-            <div class="form-group__value">
-              <p>Alphacomm</p>
-            </div>
-          </div>
-        </div>
-        <div class="form-group ">
-          <div class="form-group__label "><span>Select Stores:</span></div>
-          <div class="form-group__field">
-            <div class="select" data-select>
-              <div class="select__header"> <svg class="icon icon-angle-down select__arrow"><use xlink:href="img/sprite.svg#icon-angle-down"></use></svg>
-                <div class="select__value" data-select-value></div>
+      <div class="settings">
+        <div class="settings__inner">
+          <ul class="sm-info">
+            <li class="sm-info__item">
+              <div class="sm-info__label">Company:</div>
+              <div class="sm-info__value">Alpha Wireless</div>
+            </li>
+            <li class="sm-info__item">
+              <div class="sm-info__label">Account Code:</div>
+              <div class="sm-info__value">12345</div>
+            </li>
+            <li class="sm-info__item">
+              <div class="sm-info__label">User:</div>
+              <div class="sm-info__value">john123</div>
+            </li>
+            <li class="sm-info__item">
+              <div class="sm-info__label">Vendors:</div>
+            </li>
+          </ul>
+          <div class="section">
+            <div class="section__title">Alphacomm</div>
+            <form action="/">
+              <div class="form-group ">
+                <div class="form-group__label text-left"><span>Reference #:</span></div>
+                <div class="form-group__field">
+                  <div class="form-group__value">
+                    <p>ALPHACOM#REF</p>
+                  </div>
+                </div>
               </div>
-              <div class="select__body">
-                <ul class="select__list">
-                  <li class="select__option" data-select-option>Main Store</li>
-                  <li class="select__option" data-select-option>Not Main Store</li>
-                  <li class="select__option" data-select-option>My Awesome Store</li>
-                  <li class="select__option" data-select-option>Other Store</li>
-                  <li class="select__option" data-select-option>Store with longlonglonglonglonglonglong name</li>
-                  <li class="select__option" data-select-option>Some Store</li>
-                  <li class="select__option" data-select-option>What is this?</li>
-                  <li class="select__option" data-select-option>Stuff</li>
-                </ul>
+              <div class="form-group ">
+                <div class="form-group__label text-left"><span>Customer Id&nbsp;level:</span></div>
+                <div class="form-group__field">
+                  <div class="form-group__row">
+                    <div class="form-group__col"> <label class="radio">
+	<input type="radio" name="customer-id-level" checked>
+	<span class="radio__icon"></span>
+	
+		<span class="radio__title">Company</span>
+	
+</label> </div>
+                    <div class="form-group__col"> <label class="radio">
+	<input type="radio" name="customer-id-level" >
+	<span class="radio__icon"></span>
+	
+		<span class="radio__title">User</span>
+	
+</label> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group ">
+                <div class="form-group__label text-left"><span>Customer Id:</span></div>
+                <div class="form-group__field"> <input type="text" class="input form-group__input" value="443322"> </div>
+              </div>
+              <div class="section__footer"> <button class="btn btn_wide section__btn">Save</button> </div>
+            </form>
+          </div>
+          <div class="section">
+            <div class="section__title">Techmobile</div>
+            <div class="form-group ">
+              <div class="form-group__label text-left"><span>Reference #:</span></div>
+              <div class="form-group__field">
+                <div class="form-group__value">
+                  <p>TECHM#REF</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="section__title">Idoo</div>
+            <div class="form-group ">
+              <div class="form-group__label text-left"><span>Reference #:</span></div>
+              <div class="form-group__field">
+                <div class="form-group__value">
+                  <p>IDOO#REF</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="form-group ">
-          <div class="form-group__label "><span>Order #:</span></div>
-          <div class="form-group__field"> <input type="text" class="input form-group__input" value="1234"> </div>
-        </div>
-        <div class="form-group ">
-          <div class="form-group__label "><span>Order summary:</span></div>
-          <div class="form-group__field">
-            <div class="form-group__value">
-              <p>Total items: 140</p>
-              <p>Total SKU: 30</p>
-              <p>Total amount: $700.00</p>
-            </div>
-          </div>
-        </div>
-        <div class="form__submit"> <button class="btn btn_wide form__btn" type="submit">Send</button> <button class="btn-icon form__btn-icon" type="button" data-modal-control="modal-info">
-				
-<svg class="icon icon-attention btn-icon__icon"><use xlink:href="img/sprite.svg#icon-attention"></use></svg>
-
-			</button> </div>
-      </form>
+      </div>
     </div>
     <!-- END content -->
     <!-- begin footer -->
