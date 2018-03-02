@@ -11,9 +11,11 @@
 	transition: border-color 0.25s
 	&::-ms-clear 
 		display: none
-	&:focus
-		border-color: $blue
-	&:disabled
+	&:not([readonly])
+		&:focus
+			border-color: $blue
+	&:disabled,
+	&[readonly]
 		border-color: lighten($darkGray, 50%)
 		background: lighten($darkGray, 75%)
 		cursor: not-allowed

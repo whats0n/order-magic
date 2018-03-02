@@ -3,23 +3,20 @@
 	<div class="nav__inner" data-modal-container>
 		<button class="nav__header" data-modal-close>
 			{{mixins.icon('angle-left')}}
-			<span>Alpha Wireless</span>
+			<strong>Alpha Wireless</span>
+			<span class="user-data__subtitle">Access Code: 12345</span>
 		</button>
 		<div class="nav__body">
 			<div class="user-data nav__user-data">
-				<div class="user-data__img">
-					{{mixins.icon('user')}}
-				</div>
-				<div class="user-data__content">
-					<div class="user-data__title">John Doe</div>
-					<div class="user-data__subtitle">john123</div>
-				</div>
+				<div class="user-data__title">John Doe</div>
+				<div class="user-data__subtitle">john123</div>
+				
 			</div>
 			<ul class="nav__list">
 				{% for item in [
-					{ icon: 'cogs', title: 'Settings' },
-					{ icon: 'question', title: 'Help' },
-					{ icon: 'logout', title: 'Logout' }
+					{ icon: 'gear-option', title: 'Settings' },
+					{ icon: 'question-option', title: 'Help' },
+					{ icon: 'logout-mark', title: 'Logout' }
 				] %}
 					<li class="nav__item">
 						<a href="#" class="nav__link">

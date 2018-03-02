@@ -1,5 +1,6 @@
 ---
 title: Index page
+headerLogo: true
 ---
 {% extends "layouts/_layout.html" %}
 
@@ -28,7 +29,7 @@ title: Index page
 		{{mixins.group({
 			label: 'Order #',
 			input: {
-				attrs: 'value="1234"'
+				attrs: 'value="1234" readonly'
 			}
 		})}}
 		{{mixins.group({
@@ -39,10 +40,13 @@ title: Index page
 				'Total amount: $700.00'
 			]
 		})}}
-		<div class="form__submit">
+		<div class="form__submit form__submit_multiple">
 			<button class="btn btn_wide form__btn" type="submit">Send</button>
 			<button class="btn-icon form__btn-icon" type="button" data-modal-control="modal-info">
-				{{mixins.icon('attention', 'btn-icon__icon')}}
+				{{mixins.icon('information', 'btn-icon__icon')}}
+			</button>
+			<button class="btn-icon btn-icon_red form__btn-icon" type="button" data-modal-control="modal-info" hidden>
+				{{mixins.icon('warning', 'btn-icon__icon')}}
 			</button>
 		</div>
 	</form>

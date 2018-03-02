@@ -4,10 +4,13 @@
 		<span></span>
 	</button>
 	<button class="header__btn-help">
-		{{mixins.icon('question')}}
+		{{mixins.icon('question-option')}}
 	</button>
 	<div class="header__inner">
-		<div class="header__title">Order Magic</div>
+		<div class="header__title">{{headerTitle or 'Order Magic By'}}</div>
+		{% if headerLogo %}
+			<img src="img/b2b-white.svg" alt="B2BSoft" class="header__logo">
+		{% endif %}
 	</div>
 </header>
 <!-- end header -->
