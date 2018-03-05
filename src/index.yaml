@@ -3,3 +3,4 @@ ProjectTitle: order-magic
 PageList:
 - file: main.html
 - file: settings.html
+- file: loader.html
