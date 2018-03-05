@@ -5,8 +5,14 @@
 	left: 0
 	right: 0
 	bottom: 0
+	opacity: 0
+	visibility: hidden
 	background: rgba($white, 0.8)
 	+vertical 
+	transition: opacity 0.25s, visibility 0.25s
+	&.is-open
+		opacity: 1
+		visibility: visible
 	&__icon
 		position: relative
 		display: inline-block
