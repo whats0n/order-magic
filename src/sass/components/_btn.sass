@@ -24,6 +24,10 @@
 			transform: translate3d(50%,0,0)
 		.icon-left
 			transform: translate3d(-50%,0,0)
+	&:disabled,
+	&.is-disabled
+		opacity: 0.7
+		cursor: not-allowed
 	&_red
 		background: $red
 		&:active
