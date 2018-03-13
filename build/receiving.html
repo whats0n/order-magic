@@ -20,8 +20,7 @@
 
 	</button>
       <div class="header__inner">
-        <div class="header__title">Order Magic: Settings</div>
-      </div>
+        <div class="header__title">Order Magic By</div> <img src="img/b2b-white.svg" alt="B2BSoft" class="header__logo"> </div>
     </header>
     <!-- end header -->
     <!-- begin nav -->
@@ -77,80 +76,62 @@
     <!-- end nav -->
     <!-- BEGIN content -->
     <div class="container">
-      <div class="settings">
-        <div class="settings__inner">
-          <div class="section" data-accordion-item>
-            <div class="section__header" data-accordion-control>
-              <div class="section__title">Alphacomm</div> <svg class="icon icon-angle-down section__arrow"><use xlink:href="img/sprite.svg#icon-angle-down"></use></svg> </div>
-            <div class="section__body" data-accordion-content>
-              <form action="/">
-                <div class="form-group ">
-                  <div class="form-group__label text-left"><span>Reference #:</span></div>
-                  <div class="form-group__field">
-                    <div class="form-group__value">
-                      <p>ALPHACOM#REF</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group ">
-                  <div class="form-group__label text-left"><span>Customer Id&nbsp;level:</span></div>
-                  <div class="form-group__field">
-                    <div class="form-group__row">
-                      <div class="form-group__col"> <label class="radio">
-	<input type="radio" name="customer-id-level" checked>
-	<span class="radio__icon"></span>
-	
-		<span class="radio__title">Company</span>
-	
-</label> </div>
-                      <div class="form-group__col"> <label class="radio">
-	<input type="radio" name="customer-id-level" >
-	<span class="radio__icon"></span>
-	
-		<span class="radio__title">User</span>
-	
-</label> </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group ">
-                  <div class="form-group__label text-left"><span>Customer Id:</span></div>
-                  <div class="form-group__field"> <input type="text" class="input form-group__input" value="443322"> </div>
-                </div>
-                <div class="section__footer"> <button class="btn btn_wide section__btn">Save</button> </div>
-              </form>
+      <form action="/" class="form">
+        <div class="form-group ">
+          <div class="form-group__label "><span>Reference #:</span></div> <button class="btn btn_wide form-group__btn">Check</button>
+          <div class="form-group__field"> <input type="text" class="input form-group__input" value="GA12345"> </div>
+        </div>
+        <div class="info">
+          <div class="info__label">Order summary:</div>
+          <div class="info__row">
+            <div class="info__col info__col_md">
+              <ul class="info__text">
+                <li><span>Order No:</span> 17653</li>
+                <li><span>Order Date:</span> 02/03/2018</li>
+                <li><span>Status:</span> Completed</li>
+              </ul>
+            </div>
+            <div class="info__col info__col_md">
+              <ul class="info__text">
+                <li><span>Total items:</span> 140</li>
+                <li><span>Total SKUs:</span> 30</li>
+                <li><span>Total amount:</span> $700.00</li>
+              </ul>
             </div>
           </div>
-          <div class="section" data-accordion-item>
-            <div class="section__header" data-accordion-control>
-              <div class="section__title">Techmobile</div> <svg class="icon icon-angle-down section__arrow"><use xlink:href="img/sprite.svg#icon-angle-down"></use></svg> </div>
-            <div class="section__body" data-accordion-content>
-              <div class="form-group ">
-                <div class="form-group__label text-left"><span>Reference #:</span></div>
-                <div class="form-group__field">
-                  <div class="form-group__value">
-                    <p>TECHM#REF</p>
-                  </div>
-                </div>
+          <div class="info__row">
+            <div class="info__col">
+              <ul class="info__text">
+                <li><span>Description:</span> Order iPhone5 for Main store</li>
+                <li><span>Address:</span> 30 Broad Street, Floor 22, New York, NY 10004, US</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="form-group ">
+          <div class="form-group__label "><span>Select Stores:</span></div>
+          <div class="form-group__field">
+            <div class="select select_top" data-select>
+              <div class="select__header"> <svg class="icon icon-angle-down select__arrow"><use xlink:href="img/sprite.svg#icon-angle-down"></use></svg>
+                <div class="select__value" data-select-value></div>
               </div>
-            </div>
-          </div>
-          <div class="section" data-accordion-item>
-            <div class="section__header" data-accordion-control>
-              <div class="section__title">Idoo</div> <svg class="icon icon-angle-down section__arrow"><use xlink:href="img/sprite.svg#icon-angle-down"></use></svg> </div>
-            <div class="section__body" data-accordion-content>
-              <div class="form-group ">
-                <div class="form-group__label text-left"><span>Reference #:</span></div>
-                <div class="form-group__field">
-                  <div class="form-group__value">
-                    <p>IDOO#REF</p>
-                  </div>
-                </div>
+              <div class="select__body">
+                <ul class="select__list">
+                  <li class="select__option" data-select-option>Main Store</li>
+                  <li class="select__option" data-select-option>Not Main Store</li>
+                  <li class="select__option" data-select-option>My Awesome Store</li>
+                  <li class="select__option" data-select-option>Other Store</li>
+                  <li class="select__option" data-select-option>Store with longlonglonglonglonglonglong name</li>
+                  <li class="select__option" data-select-option>Some Store</li>
+                  <li class="select__option" data-select-option>What is this?</li>
+                  <li class="select__option" data-select-option>Stuff</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
-      </div>
+        <div class="form__submit"> <button class="btn btn_wide form__btn" type="submit">Receive</button> </div>
+      </form>
     </div>
     <!-- END content -->
     <!-- begin footer -->

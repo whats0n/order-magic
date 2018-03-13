@@ -48,6 +48,7 @@
 			font-size: 18px
 
 .modal-content
+	color: $darkGray
 	background: $white
 	box-shadow: 0 3px 7px 1px rgba($black, 0.1)
 	&__header
@@ -71,3 +72,10 @@
 	&__footer
 		border-top: 1px solid rgba($black, 0.1)
 		text-align: right
+	&__btn
+		+xs
+			width: 100%
+		&:not(:last-child)
+			margin-right: 20px
+			+xs
+				margin: 0 0 10px

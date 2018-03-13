@@ -13,10 +13,16 @@
 	&.is-open
 		opacity: 1
 		visibility: visible
-	&__icon
-		position: relative
+	&__center
 		display: inline-block
 		vertical-align: middle
+	&__title
+		color: $darkGray
+		+f(18px, 500, 1.2)
+	&__icon
+		position: relative
+		display: block
+		margin: 0 auto
 		width: 1em
 		height: 1em
 		font-size: 150px

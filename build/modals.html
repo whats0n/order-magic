@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Index page</title>
+    <title>Modals</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
@@ -20,8 +20,7 @@
 
 	</button>
       <div class="header__inner">
-        <div class="header__title">Order Magic: Settings</div>
-      </div>
+        <div class="header__title">Order Magic By</div> <img src="img/b2b-white.svg" alt="B2BSoft" class="header__logo"> </div>
     </header>
     <!-- end header -->
     <!-- begin nav -->
@@ -46,7 +45,7 @@
 </span>
 							<span class="nav__title">Purchase Order</span>
 						</a> </li>
-            <li class="nav__item"> <a href="#" class="nav__link is-active">
+            <li class="nav__item"> <a href="#" class="nav__link ">
 							<span class="nav__icon">
 <svg class="icon icon-receiving "><use xlink:href="img/sprite.svg#icon-receiving"></use></svg>
 </span>
@@ -77,77 +76,61 @@
     <!-- end nav -->
     <!-- BEGIN content -->
     <div class="container">
-      <div class="settings">
-        <div class="settings__inner">
-          <div class="section" data-accordion-item>
-            <div class="section__header" data-accordion-control>
-              <div class="section__title">Alphacomm</div> <svg class="icon icon-angle-down section__arrow"><use xlink:href="img/sprite.svg#icon-angle-down"></use></svg> </div>
-            <div class="section__body" data-accordion-content>
-              <form action="/">
-                <div class="form-group ">
-                  <div class="form-group__label text-left"><span>Reference #:</span></div>
-                  <div class="form-group__field">
-                    <div class="form-group__value">
-                      <p>ALPHACOM#REF</p>
+      <ul>
+        <li> <a href="#" data-modal-control="modal-setup">modal-setup</a> </li>
+        <li> <a href="#" data-modal-control="modal-info">modal-info</a> </li>
+      </ul>
+      <div class="modal modal_sm" data-modal="modal-setup">
+        <div class="modal__container" data-modal-container>
+          <div class="modal-content">
+            <div class="modal-content__header">
+              <div class="modal-content__title">Order Magic setup</div>
+            </div>
+            <div class="modal-content__body">
+              <div class="info">
+                <div class="info__row">
+                  <div class="info__col">
+                    <div class="info__text">
+                      <p>This is your first Idoo PO Receiving order that is processed via Order Magic plugin</p>
+                    </div>
+                  </div>
+                  <div class="info__col">
+                    <div class="info__text">
+                      <p>Please enter your Idoo credentials to proceed</p>
                     </div>
                   </div>
                 </div>
-                <div class="form-group ">
-                  <div class="form-group__label text-left"><span>Customer Id&nbsp;level:</span></div>
-                  <div class="form-group__field">
-                    <div class="form-group__row">
-                      <div class="form-group__col"> <label class="radio">
-	<input type="radio" name="customer-id-level" checked>
-	<span class="radio__icon"></span>
-	
-		<span class="radio__title">Company</span>
-	
-</label> </div>
-                      <div class="form-group__col"> <label class="radio">
-	<input type="radio" name="customer-id-level" >
-	<span class="radio__icon"></span>
-	
-		<span class="radio__title">User</span>
-	
-</label> </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group ">
-                  <div class="form-group__label text-left"><span>Customer Id:</span></div>
-                  <div class="form-group__field"> <input type="text" class="input form-group__input" value="443322"> </div>
-                </div>
-                <div class="section__footer"> <button class="btn btn_wide section__btn">Save</button> </div>
-              </form>
-            </div>
-          </div>
-          <div class="section" data-accordion-item>
-            <div class="section__header" data-accordion-control>
-              <div class="section__title">Techmobile</div> <svg class="icon icon-angle-down section__arrow"><use xlink:href="img/sprite.svg#icon-angle-down"></use></svg> </div>
-            <div class="section__body" data-accordion-content>
+              </div>
               <div class="form-group ">
-                <div class="form-group__label text-left"><span>Reference #:</span></div>
-                <div class="form-group__field">
-                  <div class="form-group__value">
-                    <p>TECHM#REF</p>
-                  </div>
-                </div>
+                <div class="form-group__label "><span>Username:</span></div>
+                <div class="form-group__field"> <input type="text" class="input form-group__input"> </div>
+              </div>
+              <div class="form-group ">
+                <div class="form-group__label "><span>Password:</span></div>
+                <div class="form-group__field"> <input type="text" class="input form-group__input"> </div>
               </div>
             </div>
+            <div class="modal-content__footer"> <button class="btn modal-content__btn" data-modal-close>Save</button> <button class="btn btn_red modal-content__btn" data-modal-close>Cancel</button> </div>
           </div>
-          <div class="section" data-accordion-item>
-            <div class="section__header" data-accordion-control>
-              <div class="section__title">Idoo</div> <svg class="icon icon-angle-down section__arrow"><use xlink:href="img/sprite.svg#icon-angle-down"></use></svg> </div>
-            <div class="section__body" data-accordion-content>
-              <div class="form-group ">
-                <div class="form-group__label text-left"><span>Reference #:</span></div>
-                <div class="form-group__field">
-                  <div class="form-group__value">
-                    <p>IDOO#REF</p>
-                  </div>
-                </div>
-              </div>
+        </div>
+      </div>
+      <div class="modal modal_sm" data-modal="modal-info">
+        <div class="modal__container" data-modal-container> <button class="modal__close" data-modal-close>
+			
+<svg class="icon icon-close "><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+
+		</button>
+          <div class="modal-content">
+            <div class="modal-content__header">
+              <div class="modal-content__title">Info: header</div>
             </div>
+            <div class="modal-content__body">
+              <p>Info: item 1</p>
+              <p>Info: item 2</p>
+              <p>Info: item 3</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque optio culpa architecto incidunt obcaecati quidem, sapiente officia quasi nihil consectetur.</p>
+            </div>
+            <div class="modal-content__footer"> <button class="btn modal-content__btn" data-modal-close>OK</button> </div>
           </div>
         </div>
       </div>

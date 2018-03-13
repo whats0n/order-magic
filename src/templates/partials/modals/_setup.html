@@ -1,0 +1,37 @@
+<div class="modal modal_sm" data-modal="modal-setup">
+	<div class="modal__container" data-modal-container>
+		<div class="modal-content">
+			<div class="modal-content__header">
+				<div class="modal-content__title">Order Magic setup</div>
+			</div>
+			<div class="modal-content__body">
+				<div class="info">
+					<div class="info__row">
+						<div class="info__col">
+							<div class="info__text">
+								<p>This is your first Idoo PO Receiving order that is processed via Order Magic plugin</p>
+							</div>
+						</div>
+						<div class="info__col">
+							<div class="info__text">
+								<p>Please enter your Idoo credentials to proceed</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				{{mixins.group({
+					label: 'Username',
+					input: true
+				})}}
+				{{mixins.group({
+					label: 'Password',
+					input: true
+				})}}
+			</div>
+			<div class="modal-content__footer">
+				<button class="btn modal-content__btn" data-modal-close>Save</button>
+				<button class="btn btn_red modal-content__btn" data-modal-close>Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,64 @@
+---
+title: Index page
+headerLogo: true
+navActive: 2
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	<form action="/" class="form">
+		{{mixins.group({
+			label: 'Reference #',
+			input: {
+				attrs: 'value="GA12345"'
+			},
+			btn: 'Check'
+		})}}
+		<div class="info">
+			<div class="info__label">Order summary:</div>
+			<div class="info__row">
+				{% for item in [
+					[ '<span>Order No:</span> 17653', '<span>Order Date:</span> 02/03/2018', '<span>Status:</span> Completed' ],
+					[ '<span>Total items:</span> 140', '<span>Total SKUs:</span> 30', '<span>Total amount:</span> $700.00' ]
+				] %}
+					<div class="info__col info__col_md">
+						<ul class="info__text">
+							{% for item in item %}
+								<li>{{item | safe}}</li>
+							{% endfor %}
+						</ul>
+					</div>
+				{% endfor %}
+			</div>
+			<div class="info__row">
+				<div class="info__col">
+					<ul class="info__text">
+						<li><span>Description:</span> Order iPhone5 for Main store</li>
+						<li><span>Address:</span> 30 Broad Street, Floor 22, New York, NY 10004, US</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		{{mixins.group({
+			label: 'Select Stores',
+			select: {
+				classList: 'select_top',
+				options: [
+					'Main Store',
+					'Not Main Store',
+					'My Awesome Store',
+					'Other Store',
+					'Store with longlonglonglonglonglonglong name',
+					'Some Store',
+					'What is this?',
+					'Stuff'
+				]
+			}
+		})}}
+		<div class="form__submit">
+			<button class="btn btn_wide form__btn" type="submit">Receive</button>
+		</div>
+	</form>
+	
+{% endblock %}

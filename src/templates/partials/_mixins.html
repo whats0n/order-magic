@@ -5,6 +5,9 @@
 {% macro group(props) %}
 <div class="form-group {{props.classList}}">
 	<div class="form-group__label {{props.labelClassList}}"><span>{{props.label | safe}}:</span></div>
+	{% if props.btn %}
+		<button class="btn btn_wide form-group__btn">{{props.btn}}</button>
+	{% endif %}
 	<div class="form-group__field">
 		{% if props.value %}
 			<div class="form-group__value">
@@ -30,7 +33,7 @@
 {% endmacro %}
 
 {% macro select(props) %}
-<div class="select" data-select>
+<div class="select {{props.classList}}" data-select>
 	<div class="select__header">
 		{{icon('angle-down', 'select__arrow')}}
 		<div class="select__value" data-select-value></div>

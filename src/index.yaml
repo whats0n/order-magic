@@ -3,4 +3,6 @@ ProjectTitle: order-magic
 PageList:
 - file: main.html
 - file: settings.html
+- file: receiving.html
 - file: loader.html
+- file: modals.html

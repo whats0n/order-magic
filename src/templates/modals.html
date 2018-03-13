@@ -1,0 +1,23 @@
+---
+title: Modals
+headerLogo: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	{% set modals = [
+		{ target: 'modal-setup', file: 'setup' },
+		{ target: 'modal-info', file: 'info' }
+	] %}
+	<ul>
+		{% for item in modals %}
+			<li>
+				<a href="#" data-modal-control="{{item.target}}">{{item.target}}</a>
+			</li>
+		{% endfor %}
+	</ul>
+
+	{% for item in modals %}
+		{% include 'partials/modals/_' + item.file + '.html' %}
+	{% endfor %}
+{% endblock %}
