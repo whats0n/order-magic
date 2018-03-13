@@ -13,7 +13,7 @@ navActive: 2
 			input: {
 				attrs: 'value="GA12345"'
 			},
-			btn: 'Check'
+			btn: 'Find'
 		})}}
 		<div class="info">
 			<div class="info__label">Order summary:</div>
@@ -22,7 +22,7 @@ navActive: 2
 					[ '<span>Order No:</span> 17653', '<span>Order Date:</span> 02/03/2018', '<span>Status:</span> Completed' ],
 					[ '<span>Total items:</span> 140', '<span>Total SKUs:</span> 30', '<span>Total amount:</span> $700.00' ]
 				] %}
-					<div class="info__col info__col_md">
+					<div class="info__col info__col_{% if loop.first %}lg{% else %}sm{% endif %}">
 						<ul class="info__text">
 							{% for item in item %}
 								<li>{{item | safe}}</li>

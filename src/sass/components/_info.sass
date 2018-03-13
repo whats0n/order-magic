@@ -11,11 +11,18 @@
 		float: left
 		padding: 5px 10px
 		width: 100%
-		&_md
-			width: 50%
+		&_lg
+			width: 60%
+			+xs
+				width: 100%
+		&_sm
+			width: 40%
 			+xs
 				width: 100%
 	&__text
-		+f(16px, 400, 18px)
+		+f(14px, 400, 18px)
 		span
+			display: inline-block
+			vertical-align: top
+			width: 100px
 			color: lighten($darkGray, 30%)
