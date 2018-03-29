@@ -20,8 +20,7 @@
 
 	</button>
       <div class="header__inner">
-        <div class="header__title">Order Magic: Settings</div>
-      </div>
+        <div class="header__title">Order Magic</div> <img src="img/alphacomm-white.png" alt="Alphacomm" class="header__logo header__logo_vendor"> </div>
     </header>
     <!-- end header -->
     <!-- begin nav -->
@@ -77,80 +76,59 @@
     <!-- end nav -->
     <!-- BEGIN content -->
     <div class="container">
-      <div class="settings">
-        <div class="settings__inner">
-          <div class="section" data-accordion-item>
-            <div class="section__header" data-accordion-control>
-              <div class="section__title">Alphacomm</div> <svg class="icon icon-angle-down section__arrow"><use xlink:href="img/sprite.svg#icon-angle-down"></use></svg> </div>
-            <div class="section__body" data-accordion-content>
-              <form action="/">
-                <div class="form-group ">
-                  <div class="form-group__label text-left"><span>Reference #:</span></div>
-                  <div class="form-group__field">
-                    <div class="form-group__value">
-                      <p>ALPHACOM#REF</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group ">
-                  <div class="form-group__label text-left"><span>Customer Id&nbsp;level:</span></div>
-                  <div class="form-group__field">
-                    <div class="form-group__row">
-                      <div class="form-group__col"> <label class="radio">
-	<input type="radio" name="customer-id-level" checked>
-	<span class="radio__icon"></span>
-	
-		<span class="radio__title">Company</span>
-	
-</label> </div>
-                      <div class="form-group__col"> <label class="radio">
-	<input type="radio" name="customer-id-level" >
-	<span class="radio__icon"></span>
-	
-		<span class="radio__title">User</span>
-	
-</label> </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group ">
-                  <div class="form-group__label text-left"><span>Customer Id:</span></div>
-                  <div class="form-group__field"> <input type="text" class="input form-group__input" value="443322"> </div>
-                </div>
-                <div class="section__footer"> <button class="btn btn_wide section__btn">Save</button> </div>
-              </form>
+      <form action="/" class="form">
+        <div class="form-group ">
+          <div class="form-group__label text-left"><span>Reference #:</span></div>
+          <div class="form-group__field">
+            <div class="form-group__value">
+              <p>ALPHACOM#REF</p>
             </div>
           </div>
-          <div class="section" data-accordion-item>
-            <div class="section__header" data-accordion-control>
-              <div class="section__title">Techmobile</div> <svg class="icon icon-angle-down section__arrow"><use xlink:href="img/sprite.svg#icon-angle-down"></use></svg> </div>
-            <div class="section__body" data-accordion-content>
-              <div class="form-group ">
-                <div class="form-group__label text-left"><span>Reference #:</span></div>
-                <div class="form-group__field">
-                  <div class="form-group__value">
-                    <p>TECHM#REF</p>
-                  </div>
-                </div>
+        </div>
+        <div class="form__text">
+          <p>Please select the Department and Category to place any newly created products:</p>
+        </div>
+        <div class="form-group ">
+          <div class="form-group__label text-left"><span>Department:</span></div>
+          <div class="form-group__field">
+            <div class="select " data-select>
+              <div class="select__header"> <svg class="icon icon-angle-down select__arrow"><use xlink:href="img/sprite.svg#icon-angle-down"></use></svg>
+                <div class="select__value" data-select-value></div>
               </div>
-            </div>
-          </div>
-          <div class="section" data-accordion-item>
-            <div class="section__header" data-accordion-control>
-              <div class="section__title">Idoo</div> <svg class="icon icon-angle-down section__arrow"><use xlink:href="img/sprite.svg#icon-angle-down"></use></svg> </div>
-            <div class="section__body" data-accordion-content>
-              <div class="form-group ">
-                <div class="form-group__label text-left"><span>Reference #:</span></div>
-                <div class="form-group__field">
-                  <div class="form-group__value">
-                    <p>IDOO#REF</p>
-                  </div>
-                </div>
+              <div class="select__body">
+                <ul class="select__list">
+                  <li class="select__option" data-select-option>Order Magic</li>
+                  <li class="select__option" data-select-option>Order Magic 1</li>
+                  <li class="select__option" data-select-option>Order Magic 2</li>
+                  <li class="select__option" data-select-option>Order Magic 3</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
-      </div>
+        <div class="form-group ">
+          <div class="form-group__label text-left"><span>Category:</span></div>
+          <div class="form-group__field">
+            <div class="select " data-select>
+              <div class="select__header"> <svg class="icon icon-angle-down select__arrow"><use xlink:href="img/sprite.svg#icon-angle-down"></use></svg>
+                <div class="select__value" data-select-value></div>
+              </div>
+              <div class="select__body">
+                <ul class="select__list">
+                  <li class="select__option" data-select-option>Alphacomm</li>
+                  <li class="select__option" data-select-option>Alphacomm 1</li>
+                  <li class="select__option" data-select-option>Alphacomm 2</li>
+                  <li class="select__option" data-select-option>Alphacomm 3</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="form__col"> <button class="btn btn_wide">Save</button> </div>
+          <div class="form__col"> <button class="btn btn_red btn_wide">Cancel</button> </div>
+        </div>
+      </form>
     </div>
     <!-- END content -->
     <!-- begin footer -->
