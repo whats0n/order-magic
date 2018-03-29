@@ -9,7 +9,7 @@
 	<div class="header__inner">
 		<div class="header__title">{{headerTitle or 'Order Magic By'}}</div>
 		{% if headerLogo %}
-			<img src="img/b2b-white.svg" alt="B2BSoft" class="header__logo">
+			<img src="img/{{headerLogoSrc or 'b2b-white.svg'}}" alt="{{headerLogoAlt or 'B2BSoft'}}" class="header__logo {% if headerLogoVendor %}header__logo_vendor{% endif %}">
 		{% endif %}
 	</div>
 </header>

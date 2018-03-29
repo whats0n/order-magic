@@ -1,0 +1,57 @@
+---
+title: Index page
+headerTitle: 'Order Magic'
+headerLogo: true
+headerLogoVendor: true
+headerLogoSrc: 'alphacomm-white.png'
+headerLogoAlt: 'Alphacomm'
+navActive: 2
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	<form action="/" class="form">
+		{{mixins.group({
+			label: 'Reference #',
+			labelClassList: 'text-left',
+			value: [ 'ALPHACOM#REF' ]
+		})}}
+		<div class="form__text">
+			<p>Please select the Department and Category to place any newly created products:</p>
+		</div>
+		{{mixins.group({
+			label: 'Department',
+			labelClassList: 'text-left',
+			select: {
+				options: [
+					'Order Magic',
+					'Order Magic 1',
+					'Order Magic 2',
+					'Order Magic 3'
+				]
+			}
+		})}}
+		{{mixins.group({
+			label: 'Category',
+			labelClassList: 'text-left',
+			select: {
+				options: [
+					'Alphacomm',
+					'Alphacomm 1',
+					'Alphacomm 2',
+					'Alphacomm 3'
+				]
+			}
+		})}}
+		<div class="form__row">
+			<div class="form__col">
+				<button class="btn btn_wide">Save</button>
+			</div>
+			<div class="form__col">
+				<button class="btn btn_red btn_wide">Cancel</button>
+			</div>
+		</div>
+	</form>
+
+{% endblock %}

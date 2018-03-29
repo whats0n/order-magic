@@ -4,5 +4,7 @@ PageList:
 - file: main.html
 - file: settings.html
 - file: receiving.html
+- file: vendors-list.html
+- file: vendor-settings.html
 - file: loader.html
 - file: modals.html

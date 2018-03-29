@@ -1,0 +1,29 @@
+---
+title: Index page
+headerLogo: true
+navActive: 2
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	<form action="/" class="form">
+		<ul class="list">
+			{% for item in [
+				{ logo: 'alphacomm.png', title: 'Alphacomm' },
+				{ logo: 'idoo.jpg', title: 'Techmobile' },
+				{ logo: 'tech-mobile.jpg', title: 'Idoo' }
+			] %}
+				<li class="list__item">
+					<a href="#" class="list__item-in">
+						<div class="list__logo">
+							<img src="img/{{item.logo}}" alt="Logo {{item.logo}}">
+						</div>
+						<div class="list__title">{{item.title}}</div>
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</form>
+	
+{% endblock %}

@@ -7,7 +7,8 @@ headerLogo: true
 {% block content %}
 	{% set modals = [
 		{ target: 'modal-setup', file: 'setup' },
-		{ target: 'modal-info', file: 'info' }
+		{ target: 'modal-info', file: 'info' },
+		{ target: 'modal-error', file: 'error' }
 	] %}
 	<ul>
 		{% for item in modals %}
