@@ -1,10 +1,6 @@
 ---
-title: Index page
-headerTitle: 'Order Magic'
-headerLogo: true
-headerLogoVendor: true
-headerLogoSrc: 'alphacomm-white.png'
-headerLogoAlt: 'Alphacomm'
+title: order magic settings
+headerTitle: order magic settings
 navActive: 2
 ---
 {% extends "layouts/_layout.html" %}
@@ -12,6 +8,11 @@ navActive: 2
 {% block content %}
 	
 	<form action="/" class="form">
+		{{mixins.group({
+			label: 'Vendor',
+			labelClassList: 'text-left',
+			value: [ 'Alphacomm' ]
+		})}}
 		{{mixins.group({
 			label: 'Reference #',
 			labelClassList: 'text-left',
@@ -44,7 +45,7 @@ navActive: 2
 				]
 			}
 		})}}
-		<div class="form__row">
+		<div class="form__row form__footer">
 			<div class="form__col">
 				<button class="btn btn_wide">Save</button>
 			</div>
