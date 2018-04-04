@@ -12,7 +12,7 @@
 		{% if props.value %}
 			<div class="form-group__value">
 				{% for item in props.value %}
-					<p>{{item}}</p>
+					<p>{{item | safe}}</p>
 				{% endfor %}
 			</div>
 		{% elif props.input %}
