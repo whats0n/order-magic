@@ -1,8 +1,14 @@
 <!-- begin header -->
 <header class="header">
-	<button class="header__btn-nav" data-modal-control="modal-nav">
-		<span></span>
-	</button>
+	{% if home %}
+		<button class="header__home">
+			{{mixins.icon('home')}}
+		</button>
+	{% else %}
+		<button class="header__btn-nav" data-modal-control="modal-nav">
+			<span></span>
+		</button>
+	{% endif %}
 	<button class="header__btn-help">
 		{{mixins.icon('question-option')}}
 	</button>

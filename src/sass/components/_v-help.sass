@@ -1,0 +1,103 @@
+.v-help
+	padding: 0 20px
+	margin: 0 auto
+	width: 100%
+	max-width: 740px
+	height: 100%
+	&__description
+		padding: 20px 0
+	&__slider
+		position: relative
+		margin-left: 60px
+		margin-right: 60px
+		background: $white
+		box-shadow: 0 2px 10px 0 rgba($black, 0.15)
+		+xs 
+			margin-left: 0
+			margin-right: 0
+			margin-bottom: 40px
+	&__slide
+		padding: 15px
+		height: 300px
+		+vertical 
+		+xs 
+			height: 250px
+		img 
+			display: inline-block
+			vertical-align: middle
+			max-width: 100%
+			max-height: 100%
+	&__arrow
+		position: absolute
+		z-index: 3
+		top: 50%
+		margin-top: -22px
+		border: 1px solid $blue
+		border-radius: 4px
+		width: 44px
+		height: 44px
+		color: $white
+		background: $blue
+		+vertical
+		transition: background 0.25s
+		+xs
+			display: none !important
+		&:active
+			background: darken($blue, 10%)
+		svg
+			display: inline-block
+			vertical-align: middle
+			height: 24px
+			fill: currentColor
+	&__prev
+		left: -54px
+		padding-right: 3px
+	&__next
+		right: -54px
+		padding-left: 3px
+	&__description
+		p
+			color: $darkGray
+			font-size: 14px
+			&:not(:last-child)
+				margin-bottom: 10px
+		a 
+			color: $blue 
+			text-decoration: none
+			&:hover
+				text-decoration: underline
+	&__dots
+		position: absolute
+		top: 100%
+		left: 0
+		right: 0
+		display: none !important
+		padding: 10px 0
+		text-align: center
+		+xs
+			display: block !important
+		li,
+		button 
+			display: inline-block
+			vertical-align: top
+		li.slick-active
+			button
+				&:before
+					border-color: $blue 
+					background: $blue
+		button 
+			position: relative
+			width: 36px
+			height: 36px
+			background: none 
+			font-size: 0
+			&:before
+				content: ''
+				position: absolute
+				top: 10px
+				left: 10px
+				right: 10px
+				bottom: 10px
+				border: 1px solid #ccc
+				border-radius: 50%
+				transition: border-color 0.25s, background 0.25s

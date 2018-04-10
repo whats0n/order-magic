@@ -43,7 +43,8 @@
 			&:after
 				bottom: 0				
 	&__btn-help,
-	&__btn-nav
+	&__btn-nav,
+	&__home
 		position: absolute
 		top: 0
 		bottom: 0
@@ -57,6 +58,16 @@
 		&:active
 			background: darken($blue, 10%)
 			box-shadow: inset 2px 2px 6px rgba(0,0,0,.2)
+	&__home
+		left: 0
+		+vertical
+		&:active
+			box-shadow: inset -2px 2px 6px rgba(0,0,0,.2)
+		.icon
+			display: inline-block
+			vertical-align: middle
+			fill: $white
+			font-size: 30px
 	&__inner 
 		padding: 0 60px
 		height: 60px

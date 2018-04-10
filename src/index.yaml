@@ -1,10 +1,13 @@
 ProjectTitle: order-magic
 
 PageList:
+- file: home.html
 - file: main.html
 - file: settings.html
 - file: receiving.html
 - file: vendors-list.html
+- file: vendors-list-settings.html
 - file: vendor-settings.html
+- file: help.html
 - file: loader.html
 - file: modals.html
