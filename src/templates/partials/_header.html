@@ -1,17 +1,19 @@
 <!-- begin header -->
 <header class="header">
-	{% if home %}
-		<button class="header__home">
-			{{mixins.icon('home')}}
-		</button>
-	{% else %}
-		<button class="header__btn-nav" data-modal-control="modal-nav">
-			<span></span>
+	{% if not noHeaderButtons %}
+		{% if home %}
+			<button class="header__home">
+				{{mixins.icon('home')}}
+			</button>
+		{% else %}
+			<button class="header__btn-nav" data-modal-control="modal-nav">
+				<span></span>
+			</button>
+		{% endif %}
+		<button class="header__btn-help">
+			{{mixins.icon('question-option')}}
 		</button>
 	{% endif %}
-	<button class="header__btn-help">
-		{{mixins.icon('question-option')}}
-	</button>
 	<div class="header__inner">
 		<div class="header__title">{{headerTitle or 'Order Magic By'}}</div>
 		{% if headerLogo %}
