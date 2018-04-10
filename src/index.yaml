@@ -2,9 +2,9 @@ ProjectTitle: order-magic
 
 PageList:
 - file: home.html
-- file: main.html
+- file: purchase-order.html
 - file: settings.html
-- file: receiving.html
+- file: idoo-receiving.html
 - file: vendors-list.html
 - file: vendors-list-settings.html
 - file: vendor-settings.html
