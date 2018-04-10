@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Index page</title>
+    <title>Idoo Receiving</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
@@ -22,7 +22,7 @@
 
 	</button>
       <div class="header__inner">
-        <div class="header__title">Purchase Order</div>
+        <div class="header__title">Idoo Receiving</div>
       </div>
     </header>
     <!-- end header -->
@@ -42,13 +42,13 @@
             <div class="user-data__subtitle">john123</div>
           </div>
           <ul class="nav__list">
-            <li class="nav__item"> <a href="#" class="nav__link is-active">
+            <li class="nav__item"> <a href="#" class="nav__link ">
 							<span class="nav__icon">
 <svg class="icon icon-home "><use xlink:href="img/sprite.svg#icon-home"></use></svg>
 </span>
 							<span class="nav__title">Home</span>
 						</a> </li>
-            <li class="nav__item"> <a href="#" class="nav__link ">
+            <li class="nav__item"> <a href="#" class="nav__link is-active">
 							<span class="nav__icon">
 <svg class="icon icon-put-in-cart "><use xlink:href="img/sprite.svg#icon-put-in-cart"></use></svg>
 </span>
@@ -87,17 +87,40 @@
     <div class="container">
       <form action="/" class="form">
         <div class="form-group ">
-          <div class="form-group__label "><span>Vendor:</span></div>
-          <div class="form-group__field">
-            <div class="form-group__value">
-              <p>Alphacomm</p>
+          <div class="form-group__label "><span>Reference #:</span></div> <button class="btn btn_wide form-group__btn">Find</button>
+          <div class="form-group__field"> <input type="text" class="input form-group__input" value="GA12345"> </div>
+        </div>
+        <div class="info">
+          <div class="info__label">Order summary:</div>
+          <div class="info__row">
+            <div class="info__col info__col_lg">
+              <ul class="info__text">
+                <li><span>Order No:</span> 17653</li>
+                <li><span>Order Date:</span> 02/03/2018</li>
+                <li><span>Status:</span> Completed</li>
+              </ul>
+            </div>
+            <div class="info__col info__col_sm">
+              <ul class="info__text">
+                <li><span>Total items:</span> 140</li>
+                <li><span>Total SKUs:</span> 30</li>
+                <li><span>Total amount:</span> $700.00</li>
+              </ul>
+            </div>
+          </div>
+          <div class="info__row">
+            <div class="info__col">
+              <ul class="info__text">
+                <li><span>Description:</span> Order iPhone5 for Main store</li>
+                <li><span>Address:</span> 30 Broad Street, Floor 22, New York, NY 10004, US</li>
+              </ul>
             </div>
           </div>
         </div>
         <div class="form-group ">
           <div class="form-group__label "><span>Select Stores:</span></div>
           <div class="form-group__field">
-            <div class="select " data-select>
+            <div class="select select_top" data-select>
               <div class="select__header"> <svg class="icon icon-angle-down select__arrow"><use xlink:href="img/sprite.svg#icon-angle-down"></use></svg>
                 <div class="select__value" data-select-value></div>
               </div>
@@ -116,29 +139,7 @@
             </div>
           </div>
         </div>
-        <div class="form-group ">
-          <div class="form-group__label "><span>Order #:</span></div>
-          <div class="form-group__field"> <input type="text" class="input form-group__input" value="1234" readonly> </div>
-        </div>
-        <div class="form-group ">
-          <div class="form-group__label "><span>Order summary:</span></div>
-          <div class="form-group__field">
-            <div class="form-group__value">
-              <p>Total items: 140</p>
-              <p>Total SKU: 30</p>
-              <p>Total amount: $700.00</p>
-            </div>
-          </div>
-        </div>
-        <div class="form__submit form__submit_multiple"> <button class="btn btn_wide form__btn" type="submit">Send</button> <button class="btn-icon form__btn-icon" type="button" data-modal-control="modal-info">
-				
-<svg class="icon icon-information btn-icon__icon"><use xlink:href="img/sprite.svg#icon-information"></use></svg>
-
-			</button> <button class="btn-icon btn-icon_red form__btn-icon" type="button" data-modal-control="modal-info" hidden>
-				
-<svg class="icon icon-warning btn-icon__icon"><use xlink:href="img/sprite.svg#icon-warning"></use></svg>
-
-			</button> </div>
+        <div class="form__submit"> <button class="btn btn_wide form__btn" type="submit">Receive</button> </div>
         <div class="form__description">
           <p>Last created PO: #1234, Reference # GA5566777, Time: 03/20/2018 9:35:42 AM</p>
         </div>
