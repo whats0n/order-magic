@@ -1,3 +1,6 @@
+.help-page
+	padding: 0
+
 .v-help
 	padding: 0 20px
 	margin: 0 auto
@@ -8,18 +11,23 @@
 		padding: 20px 0
 	&__slider
 		position: relative
-		margin-left: 60px
-		margin-right: 60px
 		background: $white
 		box-shadow: 0 2px 10px 0 rgba($black, 0.15)
+		+md
+			margin-left: 60px
+			margin-right: 60px
 		+xs 
 			margin-left: 0
 			margin-right: 0
 			margin-bottom: 40px
 	&__slide
 		padding: 15px
-		height: 300px
+		height: 370px
 		+vertical 
+		+rh(700)
+			height: 300px
+		+rh(600)
+			height: 250px
 		+xs 
 			height: 250px
 		img 

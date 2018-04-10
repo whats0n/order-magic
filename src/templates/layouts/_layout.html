@@ -11,16 +11,20 @@
     <link rel="stylesheet" media="all" href="css/app.css">
     {# {% include "../partials/_media-tags.html" %} #}
   </head>
-  <body>
+  <body {% if bodyClassList %}class="{{bodyClassList}}"{% endif %}>
 
-    {% include "partials/_header.html" %}
-    {% include "partials/_nav.html" %}
+    {% if not noHeader %}
+      {% include "partials/_header.html" %}
+      {% include "partials/_nav.html" %}
+    {% endif %}
     <!-- BEGIN content -->
     <div class="container">
       {% block content %}{% endblock %}
     </div>
     <!-- END content -->
-    {% include "partials/_footer.html" %}
+    {% if not noFooter %}
+      {% include "partials/_footer.html" %}
+    {% endif %}
 
     <!-- BEGIN scripts -->
     <script type="text/javascript" src="js/app.js"></script>
