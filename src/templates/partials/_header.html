@@ -1,9 +1,9 @@
 <!-- begin header -->
 <header class="header">
 	{% if not noHeaderButtons %}
-		{% if home %}
-			<button class="header__home">
-				{{mixins.icon('home')}}
+		{% if back %}
+			<button class="header__back">
+				{{mixins.icon('arrow-left')}}
 			</button>
 		{% else %}
 			<button class="header__btn-nav" data-modal-control="modal-nav">
