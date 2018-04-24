@@ -1,0 +1,32 @@
+---
+title: Connection
+headerLogo: true
+navActive: 1
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	<div class="description description_light description_sm">
+		<div class="description__icons">
+			{% for item in [
+				{ icon: 'cart' },
+				{ icon: 'cloud' },
+				{ icon: 'magic' }
+			] %}
+				{{mixins.icon(item.icon, 'description__icon description__' + item.icon)}}
+			{% endfor %}
+		</div>
+		<h3 class="description__title">There is no Internet connection</h3>
+		<p>Try:</p>
+		<ul>
+			<li>Turning off airplane mode</li>
+			<li>Turning on mobile data or Wi-Fi</li>
+			<li>Checking the signal in your area</li>
+		</ul>
+		<div class="description__footer">
+			<button class="btn btn_wide">Retry</button>
+		</div>
+	</div>
+	
+{% endblock %}
