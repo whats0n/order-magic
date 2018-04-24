@@ -2,21 +2,14 @@
 title: Connection
 headerLogo: true
 navActive: 1
+footerNoLinks: true
 ---
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
 	
 	<div class="description description_light description_sm">
-		<div class="description__icons">
-			{% for item in [
-				{ icon: 'cart' },
-				{ icon: 'cloud' },
-				{ icon: 'magic' }
-			] %}
-				{{mixins.icon(item.icon, 'description__icon description__' + item.icon)}}
-			{% endfor %}
-		</div>
+		<img src="img/w2.svg" alt="w2" class="description__logo">
 		<h3 class="description__title">There is no Internet connection</h3>
 		<p>Try:</p>
 		<ul>
