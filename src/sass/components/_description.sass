@@ -10,5 +10,17 @@
 		&:not(:last-child)
 			margin-bottom: 10px
 	li 
+		position: relative
+		padding-left: 15px
+		list-style-type: none
 		&:not(:last-child)
 			margin-bottom: 5px
+		&:before
+			content: ''
+			position: absolute
+			top: 6px
+			left: 0
+			border-radius: 50%
+			width: 6px
+			height: 6px
+			background: $darkGray
