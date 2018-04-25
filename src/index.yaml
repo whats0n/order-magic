@@ -2,6 +2,7 @@ ProjectTitle: order-magic
 
 PageList:
 - file: home.html
+- file: home-v2.html
 - file: purchase-order.html
 - file: settings.html
 - file: idoo-receiving.html
