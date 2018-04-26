@@ -1,8 +1,8 @@
 //FONTS
 =fontpath($name, $name1, $file)
 	src: local($name), local($name1), url("../fonts/" + $file + ".woff2") format("woff2"), url("../fonts/" + $file + ".woff") format("woff")
-=fontdefault($style, $weight)
-	font-family: 'Roboto'
+=fontdefault($style, $weight, $family: 'Roboto')
+	font-family: $family
 	font-style: $style
 	font-weight: $weight
 
@@ -34,3 +34,7 @@
 @font-face
 	+fontdefault(italic, 700)
 	+fontpath('Roboto Bold Italic', 'Roboto-BoldItalic', roboto-bolditalic)
+
+@font-face
+	+fontdefault(normal, 400, 'dancing_scriptregular')
+	+fontpath('dancing_scriptregular', 'dancingscript-regular', dancingscript-regular)

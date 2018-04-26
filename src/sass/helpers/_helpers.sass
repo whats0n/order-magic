@@ -20,6 +20,7 @@
 =gpu
   transform: translate3d(0,0,0)
 
+//width
 =md
   +r(1023)
     @content
@@ -31,6 +32,15 @@
 =xs
   +r(480)
     @content
+//height 
+=hsm
+  +rhmin(640)
+    @content
+=hxs
+  +rhmin(481)
+    @content
+
+
 
 =f($font-size: null, $font-weight: null, $line-height: null)
   @if $font-size != null
