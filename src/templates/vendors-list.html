@@ -10,14 +10,14 @@ navActive: 2
 	<form action="/" class="form">
 		<ul class="list">
 			{% for item in [
-				{ logo: 'alphacomm.png', title: 'Alphacomm' },
-				{ logo: 'idoo.jpg', title: 'Techmobile' },
-				{ logo: 'tech-mobile.jpg', title: 'Idoo' }
+				{ icon: 'sound-bold', title: 'Alpha' },
+				{ icon: 'mobile-bold', title: 'Idoo' }
 			] %}
 				<li class="list__item">
 					<a href="#" class="list__item-in">
-						<div class="list__logo">
-							<img src="img/{{item.logo}}" alt="Logo {{item.logo}}">
+						<div class="list__content">
+							{{mixins.icon(item.icon, 'list__picture')}}
+							<div class="list__title">{{item.title}}</div>
 						</div>
 					</a>
 				</li>

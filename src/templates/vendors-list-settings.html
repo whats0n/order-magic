@@ -9,15 +9,15 @@ headerTitle: order magic settings
 	<form action="/" class="form">
 		<ul class="list">
 			{% for item in [
-				{ logo: 'alphacomm.svg', title: 'Alphacomm' },
-				{ logo: 't-mobile.svg', title: 'T Mobile' },
-				{ logo: 'tech-mobile.svg', title: 'Techmobile' }
+				{ icon: 'sound', title: 'Alpha' },
+				{ icon: 'mobile', title: 'Idoo' }
 			] %}
 				<li class="list__item">
 					<a href="#" class="list__item-in">
 						{{mixins.icon('settings', 'list__icon')}}
-						<div class="list__logo">
-							<img src="img/{{item.logo}}" alt="Logo {{item.logo}}">
+						<div class="list__content">
+							{{mixins.icon(item.icon, 'list__picture')}}
+							<div class="list__title">{{item.title}}</div>
 						</div>
 					</a>
 				</li>

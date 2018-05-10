@@ -25,7 +25,7 @@
 		fill: $darkGray
 		font-size: 40px
 		transition: fill 0.25s
-		+ .list__logo
+		+ .list__content
 			padding-left: 40px
 			padding-right: 40px
 	&__logo
@@ -36,6 +36,13 @@
 			vertical-align: middle
 			max-width: 100%
 			max-height: 100%
+	&__picture,
 	&__title
-		padding-top: 10px
+		display: inline-block
+		vertical-align: top
+	&__picture 
+		margin: -10px 20px -10px 0
+		fill: $blue
+		font-size: 50px
+	&__title
 		+f(22px, 500, 1.4)
