@@ -8,9 +8,9 @@ var through2    = require('through2');
 var consolidate = require('gulp-consolidate');
 var config      = require('../../config');
 
-gulp.task('sprite:svg', function() {
+function buildSprite(props) {
     return gulp
-        .src(config.src.iconsSvg + '/*.svg')
+        .src(props.path + '/*.svg')
         .pipe(plumber({
             errorHandler: config.errorHandler
         }))
@@ -49,6 +49,7 @@ gulp.task('sprite:svg', function() {
                 .pipe(consolidate('lodash', {
                     symbols: data
                 }))
+                .pipe(rename({ basename: '_'+props.name+'-svg' }))
                 .pipe(gulp.dest(config.src.sassGen));
             gulp.src(__dirname + '/sprite.html')
                 .pipe(consolidate('lodash', {
@@ -64,10 +65,41 @@ gulp.task('sprite:svg', function() {
             },
             parserOptions: { xmlMode: true }
         }))
-        .pipe(rename({ basename: 'sprite' }))
+        .pipe(rename({ basename: props.name }))
         .pipe(gulp.dest(config.dest.img));
+}
+
+gulp.task('sprite:svg', function() {
+    return buildSprite({
+        path: config.src.iconsSvg,
+        name: 'sprite'
+    });
+});
+
+gulp.task('sprite:header:svg', function() {
+    return buildSprite({
+        path: config.src.root + '/spriteHeader',
+        name: 'spriteHeader'
+    });
+});
+
+gulp.task('sprite:nav:svg', function() {
+    return buildSprite({
+        path: config.src.root + '/spriteNav',
+        name: 'spriteNav'
+    });
+});
+
+gulp.task('sprite:vendors:svg', function() {
+    return buildSprite({
+        path: config.src.root + '/spriteVendors',
+        name: 'spriteVendors'
+    });
 });
 
 gulp.task('sprite:svg:watch', function() {
     gulp.watch(config.src.iconsSvg + '/*.svg', ['sprite:svg']);
+    gulp.watch(config.src.root + '/spriteHeader/*.svg', ['sprite:header:svg']);
+    gulp.watch(config.src.root + '/spriteNav/*.svg', ['sprite:nav:svg']);
+    gulp.watch(config.src.root + '/spriteVendors/*.svg', ['sprite:vendors:svg']);
 });

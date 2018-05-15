@@ -3,7 +3,7 @@
 	{% if not noHeaderButtons %}
 		{% if back %}
 			<button class="header__back">
-				{{mixins.icon('arrow-left')}}
+				{{mixins.icon('arrow-left', name="spriteHeader")}}
 			</button>
 		{% else %}
 			<button class="header__btn-nav" data-modal-control="modal-nav">
@@ -11,7 +11,7 @@
 			</button>
 		{% endif %}
 		<button class="header__btn-help">
-			{{mixins.icon('question-option')}}
+			{{mixins.icon('question-option', name="spriteHeader")}}
 		</button>
 	{% endif %}
 	<div class="header__inner">
