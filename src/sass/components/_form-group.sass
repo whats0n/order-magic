@@ -4,11 +4,12 @@
 	+clr
 	&:not(:last-child)
 		margin-bottom: 15px
-	// &_multiple
-	// 	.form-group
-	// 		&__label
-	// 			width: 100%
-	// 			text-align: left
+	&_static
+		.form-group
+			&__label,
+			&__value
+				padding: 0
+				height: auto
 	&__label,
 	&__field,
 		float: left

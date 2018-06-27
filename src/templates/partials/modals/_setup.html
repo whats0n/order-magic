@@ -5,7 +5,7 @@
 				<div class="modal-content__title">Order Magic setup</div>
 			</div>
 			<div class="modal-content__body">
-				<div class="info">
+				<div class="info modal-content__info">
 					<div class="info__row">
 						<div class="info__col">
 							<div class="info__text">
@@ -20,6 +20,7 @@
 					</div>
 				</div>
 				{{mixins.group({
+					classList: 'form-group_static',
 					label: 'Market',
 					value: [ 'Atlanta' ]
 				})}}
