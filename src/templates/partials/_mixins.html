@@ -9,6 +9,18 @@
 		<button class="btn btn_wide form-group__btn">{{props.btn}}</button>
 	{% endif %}
 	<div class="form-group__field">
+		{% if props.switcher %}
+			<div class="form-group__switcher">
+				<label class="awesome-switcher">
+					<input type="checkbox" checked>
+					<span class="awesome-switcher__content">
+						<span class="awesome-switcher__left">{{props.switcher.left}}</span>
+						<span class="awesome-switcher__control"></span>
+						<span class="awesome-switcher__right">{{props.switcher.right}}</span>
+					</span>
+				</label>
+			</div>
+		{% endif %}
 		{% if props.value %}
 			<div class="form-group__value">
 				{% for item in props.value %}
@@ -16,7 +28,13 @@
 				{% endfor %}
 			</div>
 		{% elif props.input %}
-			<input type="{{props.input.type or 'text'}}" class="input form-group__input" {{props.input.attrs | safe}}>
+			{% if props.switcher %}
+				<div class="form-group__input-wrapper">
+					<input type="{{props.input.type or 'text'}}" class="input form-group__input" {{props.input.attrs | safe}}>
+				</div>
+			{% else %}
+				<input type="{{props.input.type or 'text'}}" class="input form-group__input" {{props.input.attrs | safe}}>
+			{% endif %}
 		{% elif props.select %}
 			{{select(props.select)}}
 		{% elif props.radios %}
