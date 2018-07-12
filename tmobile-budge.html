@@ -3,7 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<style>
+	<link rel="stylesheet" href="idoo.css">
+	<!--<style>
 		.simple-badge {
 			position: absolute;
 			top: 5px;
@@ -195,6 +196,11 @@
 			-webkit-appearance: none;
 			appearance: none;
 		}
+	</style>-->
+	<style>
+		.badge {
+			position: relative;
+		}
 	</style>
 </head>
 <body>
@@ -246,6 +252,14 @@
 	</div>
 	<div class="box">
 		<div class="simple-badge">
+			<div class="simple-badge__hint">
+				<div class="simple-badge__hint-in">
+					<div class="simple-badge__text">On Hand: Quantity in Stock</div>
+					<div class="simple-badge__text">2W Sales: Quantity sold in the last 2 weeks</div>
+					<div class="simple-badge__text">2W Trend: Quantity needed based on 2 week trend</div>
+					<div class="simple-badge__text">On Order: Pending iDoo Orders</div>
+				</div>
+			</div>
 			<div class="simple-badge__text">On Hand: <strong>50</strong></div>
 			<div class="simple-badge__text">2W Sales: <strong>70</strong></div>
 		</div>
@@ -262,6 +276,14 @@
 	</div>
 	<div class="box">
 		<div class="simple-badge simple-badge_purple">
+			<div class="simple-badge__hint">
+				<div class="simple-badge__hint-in">
+					<div class="simple-badge__text">On Hand: Quantity in Stock</div>
+					<div class="simple-badge__text">2W Sales: Quantity sold in the last 2 weeks</div>
+					<div class="simple-badge__text">2W Trend: Quantity needed based on 2 week trend</div>
+					<div class="simple-badge__text">On Order: Pending iDoo Orders</div>
+				</div>
+			</div>
 			<div class="simple-badge__text">On Hand: <strong>999</strong></div>
 			<div class="simple-badge__text">2W Sales: <strong>999</strong></div>
 			<div class="simple-badge__text">2W Trend: <strong>999</strong></div>
