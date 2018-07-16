@@ -30,7 +30,7 @@
 		{% elif props.input %}
 			{% if props.switcher %}
 				<div class="form-group__input-wrapper">
-					<input type="{{props.input.type or 'text'}}" class="input form-group__input" {{props.input.attrs | safe}}>
+					<input type="{{props.input.type or 'text'}}" class="input form-group__input {{props.input.classList}}" {{props.input.attrs | safe}}>
 				</div>
 			{% else %}
 				<input type="{{props.input.type or 'text'}}" class="input form-group__input" {{props.input.attrs | safe}}>
