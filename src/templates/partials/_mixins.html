@@ -75,3 +75,15 @@
 	{% endif %}
 </label>
 {% endmacro	 %}
+
+{% macro checkbox(props) %}
+<label class="checkbox">
+	<input type="checkbox" {{props.inputAttrs | safe}}>
+	<span class="checkbox__icon">
+		{{icon('check')}}
+	</span>
+	{% if props.title %}
+		<span class="checkbox__title">{{props.title}}</span>
+	{% endif %}
+</label>
+{% endmacro	 %}
