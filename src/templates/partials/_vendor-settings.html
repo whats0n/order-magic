@@ -1,4 +1,4 @@
-<form action="/" class="form form_default">
+<form action="/" class="form {{vendorSettings.classList}}">
 	{{mixins.group({
 		label: 'Vendor',
 		labelClassList: 'text-left',
@@ -54,7 +54,7 @@
 			</div>
 		</div>
 	</div>
-	{% if vendorSettings.dataRange %}
+	{% if vendorSettings.dateRange %}
 		{{mixins.group({
 			label: 'Date range for the Sales Trend',
 			labelClassList: 'text-left',
