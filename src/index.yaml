@@ -9,6 +9,7 @@ PageList:
 - file: vendors-list.html
 - file: vendors-list-settings.html
 - file: vendor-settings.html
+- file: vendor-settings-datarange.html
 - file: connection.html
 - file: help.html
 - file: loader.html
