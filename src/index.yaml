@@ -14,3 +14,8 @@ PageList:
 - file: help.html
 - file: loader.html
 - file: modals.html
+
+- file: vendor-settings-datarange-metro.html
+- file: vendors-list-settings-metro.html
+- file: modals-metro.html
+

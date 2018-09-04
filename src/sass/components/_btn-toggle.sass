@@ -1,0 +1,35 @@
+.btn-toggle
+	width: 40px
+	height: 40px
+	background: none
+	+vertical
+	+hover 
+		.btn-toggle
+			&__visible,
+			&__hidden
+				fill: $blue
+	// +hover('boost')
+	// 	.btn-toggle
+	// 		&__visible,
+	// 		&__hidden
+	// 			fill: $elevatePrimary
+	+hover('metro')
+		.btn-toggle
+			&__visible,
+			&__hidden
+				fill: $metroSecondary
+	&.is-active
+		.btn-toggle
+			&__visible
+				display: none
+			&__hidden
+				display: inline-block
+	&__visible,
+	&__hidden
+		display: inline-block
+		vertical-align: middle
+		fill: $black
+		font-size: (20px*0.75)
+		transition: fill 0.25s
+	&__hidden
+		display: none

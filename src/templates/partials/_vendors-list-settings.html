@@ -1,0 +1,18 @@
+<form action="/" class="form">
+	<ul class="list">
+		{% for item in [
+			{ icon: 'sound-bold', title: 'Alpha' },
+			{ icon: 'mobile-bold', title: 'Idoo' }
+		] %}
+			<li class="list__item">
+				<a href="#" class="list__item-in">
+					{{mixins.icon('settings', 'list__icon')}}
+					<div class="list__content">
+						{{mixins.icon(item.icon, 'list__picture', 'spriteVendors')}}
+						<div class="list__title">{{item.title}}</div>
+					</div>
+				</a>
+			</li>
+		{% endfor %}
+	</ul>
+</form>

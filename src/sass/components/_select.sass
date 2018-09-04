@@ -20,6 +20,14 @@
 		transition: border-color 0.25s
 		.select.is-open &
 			border-color: $blue
+			+metro
+				border-color: $metroSecondary
+		.select.is-error &
+			border-color: $red
+			+boost
+				border-color: $red
+			+metro
+				border-color: $red
 	&__value
 		position: relative
 		z-index: 2
@@ -60,8 +68,12 @@
 		+hover
 			color: $blue
 			background: rgba($black, 0.05)
+		+hover('metro')
+			color: $metroSecondary
 		&:active
 			background: rgba($black, 0.1) !important
 		&.is-active
 			color: $white !important
 			background: $blue !important
+			+metro
+				background: $metroSecondary !important

@@ -34,9 +34,16 @@
   text-overflow: ellipsis
   white-space: nowrap
 
-=hover
-  .no-touch &:hover
-    @content
+=hover($theme: null)
+  @if $theme == null
+    .no-touch &:hover
+      @content
+  @if $theme == 'boost'
+    .no-touch.is-boost &:hover
+      @content
+  @if $theme == 'metro'
+    .no-touch.is-metro &:hover
+      @content
 
 %pseudo
   position: relative

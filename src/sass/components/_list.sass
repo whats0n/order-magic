@@ -18,6 +18,9 @@
 			box-shadow: 0 4px 18px 4px rgba(0,0,0,0.1)
 			.list__icon 
 				fill: $blue
+		+hover('metro')
+			.list__icon
+				fill: $metroSecondary
 	&__icon
 		position: absolute
 		top: 50%
@@ -45,5 +48,7 @@
 		margin: -10px 20px -10px 0
 		fill: $blue
 		font-size: 50px
+		+metro
+			fill: $metroSecondary
 	&__title
 		+f(22px, 500, 1.4)

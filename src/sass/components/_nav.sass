@@ -56,8 +56,12 @@
 		cursor: pointer
 		pointer-events: none
 		transition: background 0.25s
+		+metro
+			background: $metroPrimary
 		+hover 
 			background: darken($blue, 10%)
+		+hover('metro')
+			background: $metroPrimary
 		&:active
 			background: darken($blue, 10%)
 			box-shadow: inset 2px 2px 6px rgba(0,0,0,.2)

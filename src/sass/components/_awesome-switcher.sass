@@ -39,6 +39,8 @@
 		// border: 1px solid #ccc
 		border: 1px solid $blue
 		transition: border-color 0.2s ease-in-out
+		+metro
+			border-color: $metroPrimary
 		&:before,
 		&:after
 			content: ''
@@ -52,6 +54,8 @@
 			// background: #eee
 			background: $blue
 			transition: background 0.2s ease-in-out, box-shadow 0.1s ease-in-out
+			+metro
+				background: $metroPrimary
 		&:after
 			top: 50%
 			left: 50%

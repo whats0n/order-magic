@@ -1,0 +1,302 @@
+=col($name)
+	&[data-column*="#{$name}"]
+		@content
+
+.table
+	position: relative
+	border: 1px solid rgba($darkGray, 0.2)
+	width: 100%
+	background: $white
+	+md 
+		display: block
+		border: none
+		background: none
+	&__thead
+		// display: table-header-group
+		display: table
+		table-layout: fixed
+		width: 100%
+		+md
+			display: none
+		.table__td
+			position: relative
+			padding-top: 10px
+			padding-bottom: 10px
+			background: rgba($darkGray, 0.2)
+			font-size: 16px
+			font-weight: 500
+			line-height: 1.2
+			+md 
+				font-size: 14px
+			&[data-sorting]
+				padding-right: 20px
+				cursor: pointer
+				&:before,
+				&:after
+					content: ''
+					position: absolute
+					right: 5px
+					top: 50%
+				&:before
+					+arr(10, 6, $darkGray, t)
+					transform: translate3d(0,-100%,0)
+				&:after
+					+arr(10, 6, $darkGray, b)
+					margin-top: 1px
+			&[data-sorting*="up"]
+				&:before
+					border-bottom-color: $blue
+					+metro
+						border-bottom-color: $metroSecondary
+
+			&[data-sorting*="down"]
+				&:after
+					border-top-color: $blue
+					+metro
+						border-bottom-color: $metroSecondary
+	&__tbody
+		// display: table-row-group
+		overflow: auto
+		max-height: 305px
+		+md 
+			overflow: visible
+			width: 100%
+			max-height: none
+		&-in
+			display: table
+			table-layout: fixed
+			width: 100%
+			+md
+				display: block
+				padding-bottom: 70px
+		.table__tr:not(:last-child) 
+			.table__td 
+				border-bottom: 1px solid rgba($darkGray, 0.2)
+				+md
+					border: none
+		.table__td		
+			&:before
+				content: attr(data-title)
+				display: none
+				padding-bottom: 3px
+				color: lighten($darkGray, 30%)
+				font-size: 16px
+				+md 
+					display: inline-block
+					vertical-align: middle
+					padding-right: 10px
+	&__tr
+		position: relative
+		display: table-row
+		+md 
+			display: block
+			padding: 20px 50px 20px 0
+			border-radius: 3px
+			background: #eeeeee
+		&.is-active
+			+md 
+				padding-right: 0
+			.table__field,
+			.table__btns
+				display: block
+			.table__edit,
+			.table__text
+				display: none
+				+md 
+					display: none
+			.table__text_static
+				display: block
+				+md 
+					display: inline-block
+	&__td 
+		display: table-cell
+		vertical-align: middle
+		padding: 5px 10px
+		word-break: break-word
+		+md 
+			display: block
+			padding: 5px 15px
+		+col('edit')
+			width: 120px
+			+md 
+				padding: 0
+				width: 100%
+			&:before
+				+md 
+					display: none
+		+col('market')
+			width: 30%
+			+md 
+				width: 100%
+		+col('password')
+			width: 35%
+			+md 
+				width: 100%
+		+col('login')
+			width: 35%
+			+md 
+				width: 100%
+		+col('active')
+			width: 80px
+			+md 
+				width: 100%
+		+col('checkbox')
+			width: 50px
+			+md 
+				width: 100%
+			&:before
+				padding-top: 5px
+	&__btns
+		margin: 0 -5px
+		+clr
+		+md
+			// padding-top: 20px
+			margin: 0 auto
+			max-width: 200px
+	&__btns-col
+		float: left
+		padding: 0 5px
+		width: 50%
+	&__btn
+		width: 100%
+		height: 50px
+		background: none
+		font-size: 0
+		transition: background 0.25s, box-shadow 0.25s
+		+hover
+			.icon
+				fill: $blue
+		// +hover('boost')
+		// 	.icon
+		// 		fill: $elevatePrimary
+		+hover('metro')
+			.icon
+				fill: $metroSecondary
+		.icon 
+			display: inline-block
+			vertical-align: middle
+			fill: $darkGray
+			font-size: 20px
+			transition: fill 0.25s
+	&__save,
+	&__cancel
+		+md 
+			border: 1px solid #ccc
+			height: 40px
+		// &:active
+		// 	+md 
+		// 		box-shadow: inset 2px 2px 2px rgba($black, 0.2)
+		// .icon
+		// 	+md 
+		// 		fill: $white !important
+	&__save
+		// +md 
+		// 	background: $blue
+		// &:active 
+		// 	+md 
+		// 		background: darken($blue, 5%)
+	&__cancel
+		// +md 
+		// 	background: $red
+		// &:active 
+		// 	+md 
+		// 		background: darken($red, 5%)
+		+hover
+			.icon
+				fill: $red
+		// +hover('boost')
+		// 	.icon
+		// 		fill: $red
+		+hover('metro')
+			.icon
+				fill: $red
+	&__edit
+		+md
+			position: absolute
+			top: 10px
+			right: 0
+			width: 50px
+	&__field,
+	&__btns
+		display: none
+	&__field
+		position: relative
+		padding: 20px 0
+		+md 
+			padding: 0 0 15px
+	&__error-message
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 2px
+		+md 
+			position: static
+			padding-top: 5px
+	&__text
+		font-size: 16px
+		line-height: 1.25
+		+md 
+			font-size: 14px
+		+md 
+			display: inline-block
+			vertical-align: middle
+			padding: 10px 0
+			font-size: 16px
+	&__input
+		+md 
+			font-size: 14px
+		+md 
+			height: 40px
+			font-size: 16px
+	&__nav
+		position: absolute
+		left: 50%
+		bottom: 0
+		margin-left: -110px
+		width: 220px
+		+clr
+	&__prev,
+	&__next
+		border-radius: 3px
+		width: 50px
+		height: 50px
+		background: $blue
+		// +boost
+		// 	background: $elevatePrimary
+		+metro
+			background: $metroSecondary
+		svg 
+			display: inline-block
+			vertical-align: middle
+			height: 50%
+			fill: $white
+	&__prev
+		float: left
+		padding-right: 3px
+	&__next
+		float: right
+		padding-left: 3px
+	&__caption
+		position: absolute
+		left: 50%
+		bottom: 0
+		display: none
+		padding: 15px 0 
+		margin-left: -60px
+		width: 120px
+		font-size: 20px
+		line-height: 1
+		text-align: center
+		+md 
+			display: block
+	&__checkbox
+		+md
+			vertical-align: middle
+	&__toggle-password
+		position: absolute
+		top: 20px
+		right: 0
+		+md 
+			top: 0
+		+ .table__input
+			padding-right: 40px

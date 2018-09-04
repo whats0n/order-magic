@@ -22,7 +22,7 @@
 
 //width
 =md
-  +r(1023)
+  +r(620)
     @content
 
 =sm
@@ -49,3 +49,11 @@
     font-weight: $font-weight
   @if $line-height != null
     line-height: $line-height
+
+=boost
+  .is-boost &
+    @content
+
+=metro
+  .is-metro &
+    @content
