@@ -3,24 +3,27 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Index page</title>
+    <title>Purchase Order</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" media="all" href="css/app.css"> </head>
 
-  <body>
+  <body class="is-metro">
     <!-- begin header -->
-    <header class="header"> <button class="header__btn-nav" data-modal-control="modal-nav">
-				<span></span>
+    <header class="header"> <button class="header__back">
+				
+<svg class="icon icon-arrow-left "><use xlink:href="img/spriteHeader.svg#icon-arrow-left"></use></svg>
+
 			</button> <button class="header__btn-help">
 			
 <svg class="icon icon-question-option "><use xlink:href="img/spriteHeader.svg#icon-question-option"></use></svg>
 
 		</button>
       <div class="header__inner">
-        <div class="header__title">Order Magic By</div> <img src="img/b2b-white.svg" alt="B2BSoft" class="header__logo "> </div>
+        <div class="header__title">Purchase Order</div>
+      </div>
     </header>
     <!-- end header -->
     <!-- begin nav -->
@@ -82,22 +85,64 @@
     <!-- end nav -->
     <!-- BEGIN content -->
     <div class="container">
-      <div class="description description_metro">
-        <p class="text-center"><strong>Welcome to Order Magic</strong>, <br>your Inventory Management assistant</p>
-        <p>Now you can:</p>
-        <ul>
-          <li>Create Alphacomm Purchase Orders in Wireless Standard - double entry no longer needed! </li>
-          <li>Create and receive Idoo Purchase Orders into your Wireless Standard Inventory!</li>
-        </ul>
-        <p>Fully Mobile & Multi-Platform Access</p>
-        <p>Sometimes your business needs a little Magic!</p>
-        <div class="description__logos">
-          <div class="description__logo description__logo_sm description__logo_wide"> <img src="img/metropcs.svg" alt="MetroPCS"> </div>
-          <div class="description__logo description__logo_sm description__logo_inline description__logo_md description__logo_t-mobile"> <img src="img/t-mobile.svg" alt="T-Mobile"> </div>
-          <div class="description__logo description__logo_sm description__logo_inline description__logo_md description__logo_alphacomm"> <img src="img/alphacomm.svg" alt="Alphacomm"> </div>
+      <form action="/" class="form">
+        <div class="form-group ">
+          <div class="form-group__label "><span>Vendor:</span></div>
+          <div class="form-group__field">
+            <div class="form-group__value">
+              <p>Alphacomm</p>
+            </div>
+          </div>
         </div>
-        <div class="description__magic-cart"> <svg class="icon icon-magic-cart "><use xlink:href="img/sprite.svg#icon-magic-cart"></use></svg> </div>
-      </div>
+        <div class="form-group ">
+          <div class="form-group__label "><span>Select Stores:</span></div>
+          <div class="form-group__field">
+            <div class="select " data-select>
+              <div class="select__header"> <svg class="icon icon-angle-down select__arrow"><use xlink:href="img/sprite.svg#icon-angle-down"></use></svg>
+                <div class="select__value" data-select-value></div>
+              </div>
+              <div class="select__body">
+                <ul class="select__list">
+                  <li class="select__option" data-select-option>Main Store</li>
+                  <li class="select__option" data-select-option>Not Main Store</li>
+                  <li class="select__option" data-select-option>My Awesome Store</li>
+                  <li class="select__option" data-select-option>Other Store</li>
+                  <li class="select__option" data-select-option>Store with longlonglonglonglonglonglong name</li>
+                  <li class="select__option" data-select-option>Some Store</li>
+                  <li class="select__option" data-select-option>What is this?</li>
+                  <li class="select__option" data-select-option>Stuff</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group ">
+          <div class="form-group__label "><span>Order #:</span></div>
+          <div class="form-group__field"> <input type="text" class="input form-group__input" value="1234" readonly> </div>
+        </div>
+        <div class="form-group ">
+          <div class="form-group__label "><span>Order summary:</span></div>
+          <div class="form-group__field">
+            <div class="form-group__value">
+              <p>Total items: 140</p>
+              <p>Total SKU: 30</p>
+              <p>Total amount: $700.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="form__submit form__submit_multiple"> <button class="btn btn_wide form__btn" type="submit">Send</button> <button class="btn-icon form__btn-icon" type="button" data-modal-control="modal-info">
+			
+<svg class="icon icon-information btn-icon__icon"><use xlink:href="img/sprite.svg#icon-information"></use></svg>
+
+		</button> <button class="btn-icon btn-icon_red form__btn-icon" type="button" data-modal-control="modal-info" hidden>
+			
+<svg class="icon icon-warning btn-icon__icon"><use xlink:href="img/sprite.svg#icon-warning"></use></svg>
+
+		</button> </div>
+        <div class="form__description">
+          <p>Last created PO: #1234, Reference # GA5566777, Time: 03/20/2018 9:35:42 AM</p>
+        </div>
+      </form>
     </div>
     <!-- END content -->
     <!-- begin footer -->

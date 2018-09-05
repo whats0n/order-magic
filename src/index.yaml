@@ -15,7 +15,16 @@ PageList:
 - file: loader.html
 - file: modals.html
 
-- file: vendor-settings-datarange-metro.html
+- file: home-metro.html
+- file: home-v2-metro.html
+- file: purchase-order-metro.html
+- file: settings-metro.html
+- file: idoo-receiving-metro.html
+- file: vendors-list-metro.html
 - file: vendors-list-settings-metro.html
+- file: vendor-settings-metro.html
+- file: vendor-settings-datarange-metro.html
+- file: connection-metro.html
+- file: help-metro.html
 - file: modals-metro.html
 

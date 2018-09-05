@@ -1,0 +1,66 @@
+<div class="settings">
+	<div class="settings__inner">
+		<div class="section" data-accordion-item>
+			<div class="section__header" data-accordion-control>
+				<div class="section__title">Alphacomm</div>
+				{{mixins.icon('angle-down', 'section__arrow')}}
+			</div>
+			<div class="section__body" data-accordion-content>
+				<form action="/">
+					{{mixins.group({
+						label: 'Reference #',
+						labelClassList: 'text-left',
+						value: [ 'ALPHACOM#REF' ]
+					})}}
+					{{mixins.group({
+						label: 'Customer Id&nbsp;level',
+						labelClassList: 'text-left',
+						radios: [
+							{ name: 'customer-id-level', title: 'Company', inputAttrs: 'checked' },
+							{ name: 'customer-id-level', title: 'User' }
+						]
+					})}}
+					{{mixins.group({
+						label: 'Customer Id',
+						labelClassList: 'text-left',
+						input: {
+							attrs: 'value="443322"'
+						}
+					})}}
+					<div class="section__footer">
+						<button class="btn btn_wide section__btn">Save</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="section" data-accordion-item>
+			<div class="section__header" data-accordion-control>
+				<div class="section__title">Techmobile</div>
+				{{mixins.icon('angle-down', 'section__arrow')}}
+			</div>
+			<div class="section__body" data-accordion-content>
+				{{mixins.group({
+					label: 'Reference #',
+					labelClassList: 'text-left',
+					value: [ 'TECHM#REF' ]
+				})}}
+			</div>
+		</div>
+		<div class="section" data-accordion-item>
+			<div class="section__header" data-accordion-control>
+				<div class="section__title">Idoo</div>
+				{{mixins.icon('angle-down', 'section__arrow')}}
+			</div>
+			<div class="section__body" data-accordion-content>
+				{{mixins.group({
+					label: 'Reference #',
+					labelClassList: 'text-left',
+					value: [ 'IDOO#REF' ]
+				})}}
+			</div>
+		</div>
+	</div>
+	{#<div class="settings__footer">
+		<button class="btn btn_wide settings__btn">Save</button>
+	</div>#}
+</div>

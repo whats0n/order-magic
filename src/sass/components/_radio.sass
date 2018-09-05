@@ -8,15 +8,23 @@
 		.radio
 			&__title
 				color: $blue
+	+hover('metro')
+		.radio
+			&__title
+				color: $metroSecondary
 	input
 		display: none
 		&:checked
 			~ .radio
 				&__icon
 					border-color: $blue
+					+metro
+						border-color: $metroSecondary
 					&:before
 						opacity: 1
 						background: $blue
+						+metro
+							background: $metroSecondary
 		&:disabled
 			~ .radio
 				&__icon,

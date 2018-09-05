@@ -50,8 +50,12 @@
 		transition: background 0.25s
 		+xs
 			display: none !important
+		+metro
+			background: $metroSecondary
 		&:active
 			background: darken($blue, 10%)
+			+metro
+				background: darken($metroSecondary, 10%)
 		svg
 			display: inline-block
 			vertical-align: middle
@@ -72,6 +76,8 @@
 		a 
 			color: $blue 
 			text-decoration: none
+			+metro
+				color: $metroSecondary
 			&:hover
 				text-decoration: underline
 	&__dots
@@ -93,6 +99,9 @@
 				&:before
 					border-color: $blue 
 					background: $blue
+					+metro 
+						border-color: $metroSecondary
+						background: $metroSecondary
 		button 
 			position: relative
 			width: 36px
