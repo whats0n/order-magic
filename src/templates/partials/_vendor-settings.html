@@ -40,8 +40,32 @@
 		labelClassList: 'text-left',
 		input: { classList: 'text-right' },
 		switcher: {
+			containerClassList: 'form-group__switcher_absolute',
+			classList: 'awesome-switcher_absolute',
 			left: '$',
 			right: '%'
+		}
+	})}}
+	{{mixins.group({
+		classList: 'form-group_switch',
+		label: 'SIM Inventory Type',
+		labelClassList: 'text-left',
+		switcher: {
+			containerClassList: 'form-group__switcher_absolute',
+			classList: 'awesome-switcher_absolute',
+			left: 'Serialized',
+			right: 'Standard'
+		}
+	})}}
+	{{mixins.group({
+		classList: 'form-group_switch',
+		label: 'Add Display Phones to Inventory',
+		labelClassList: 'text-left',
+		switcher: {
+			containerClassList: 'form-group__switcher_absolute',
+			classList: 'awesome-switcher_absolute',
+			left: 'Yes',
+			right: 'No'
 		}
 	})}}
 

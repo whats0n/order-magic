@@ -1,4 +1,5 @@
 .awesome-switcher
+	position: relative
 	display: inline-block
 	vertical-align: top
 	margin: 0
@@ -8,6 +9,25 @@
 	+nosel
 	&_hidden
 		appearance: none
+	&_absolute
+		padding-left: 30px
+		padding-right: 30px
+		+md 
+			width: 100%
+			text-align: center
+		.awesome-switcher
+			&__content
+				display: inline-block
+				vertical-align: top
+			&__left,
+			&__right
+				position: absolute
+				top: 50%
+				transform: translate3d(0,-50%,0)
+			&__left
+				right: 100%
+			&__right
+				left: 100%
 	&:active
 		.awesome-switcher__control
 			&:before
@@ -25,6 +45,9 @@
 						box-shadow: -1px 2px 2px rgba(0, 0, 0, 0.2)
 						transform: translate3d(10px, 0, 0)
 	&__content
+		position: relative
+		display: block
+		height: 100%
 		white-space: nowrap
 	&__left,
 	&__control,

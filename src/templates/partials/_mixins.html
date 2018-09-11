@@ -10,8 +10,8 @@
 	{% endif %}
 	<div class="form-group__field">
 		{% if props.switcher %}
-			<div class="form-group__switcher">
-				<label class="awesome-switcher">
+			<div class="form-group__switcher {{props.switcher.containerClassList}}">
+				<label class="awesome-switcher {{props.switcher.classList}}">
 					<input type="checkbox" checked>
 					<span class="awesome-switcher__content">
 						<span class="awesome-switcher__left">{{props.switcher.left}}</span>
