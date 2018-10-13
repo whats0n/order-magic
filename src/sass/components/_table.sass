@@ -108,6 +108,12 @@
 				display: block
 				+md 
 					display: inline-block
+		&.is-readonly
+			.table
+				&__edit
+					display: none
+				&__close
+					display: block
 	&__td 
 		display: table-cell
 		vertical-align: middle
@@ -195,7 +201,8 @@
 		// &:active 
 		// 	+md 
 		// 		background: darken($blue, 5%)
-	&__cancel
+	&__cancel,
+	&__close
 		// +md 
 		// 	background: $red
 		// &:active 
@@ -210,6 +217,8 @@
 		+hover('metro')
 			.icon
 				fill: $red
+	&__close
+		display: none
 	&__edit
 		+md
 			position: absolute

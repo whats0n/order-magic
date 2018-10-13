@@ -138,7 +138,7 @@
 										username: 'ADickenson'
 									}
 								] %}
-									<div class="table__tr {% if loop.last %}is-active{% endif %}" data-table-row="{{loop.index}}">
+									<div class="table__tr {% if loop.first %}is-readonly{% endif %} {% if loop.last %}is-active{% endif %}" data-table-row="{{loop.index}}">
 										<div class="table__td" data-column="checkbox" data-title="Qpay payment:">
 											{{mixins.checkbox({ classList: 'table__checkbox' })}}
 										</div>
@@ -167,6 +167,7 @@
 										</div>
 										<div class="table__td" data-column="edit">
 											<button type="button" class="table__btn table__edit" data-table-edit>{{mixins.icon('edit')}}</button>
+											<button type="button" class="table__btn table__close" data-table-edit>{{mixins.icon('close')}}</button>
 											<div class="table__btns">
 												<div class="table__btns-col">
 													<button type="button" class="table__btn table__save" data-table-submit>{{mixins.icon('check')}}</button>
