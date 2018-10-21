@@ -108,12 +108,13 @@
 				display: block
 				+md 
 					display: inline-block
-		&.is-readonly
-			.table
-				&__edit
-					display: none
-				&__close
-					display: block
+			&.is-readonly
+				.table
+					&__btns,
+					&__edit
+						display: none
+					&__close
+						display: block
 	&__td 
 		display: table-cell
 		vertical-align: middle

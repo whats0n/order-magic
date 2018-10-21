@@ -138,7 +138,7 @@
 										username: 'ADickenson'
 									}
 								] %}
-									<div class="table__tr {% if loop.first %}is-readonly{% endif %} {% if loop.last %}is-active{% endif %}" data-table-row="{{loop.index}}">
+									<div class="table__tr {% if loop.last %}is-readonly{% endif %} {% if loop.last %}is-active{% endif %}" data-table-row="{{loop.index}}">
 										<div class="table__td" data-column="checkbox" data-title="Qpay payment:">
 											{{mixins.checkbox({ classList: 'table__checkbox' })}}
 										</div>
