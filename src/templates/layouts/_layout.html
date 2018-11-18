@@ -15,7 +15,9 @@
 
     {% if not noHeader %}
       {% include "partials/_header.html" %}
-      {% include "partials/_nav.html" %}
+      {% if noNav %}
+        {% include "partials/_nav.html" %}
+      {% endif %}
     {% endif %}
     <!-- BEGIN content -->
     <div class="container">

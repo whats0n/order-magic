@@ -1,0 +1,23 @@
+<!-- begin login -->
+<div class="login">
+	{% for item in [
+		{
+			placeholder: 'Access Code'
+		},
+		{
+			placeholder: 'Username'
+		},
+		{
+			placeholder: 'Password',
+			type: 'password'
+		}
+	] %}
+		<div class="login__field">
+			<input type="{{item.type or 'text'}}" placeholder="{{item.placeholder}}" class="input input_md">
+		</div>
+	{% endfor %}
+	<div class="login__field">
+		<button class="btn btn_wide" data-animation="ripple">Login</button>
+	</div>
+</div>
+<!-- end login -->

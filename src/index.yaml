@@ -14,6 +14,7 @@ PageList:
 - file: help.html
 - file: loader.html
 - file: modals.html
+- file: login.html
 
 - file: home-metro.html
 - file: home-v2-metro.html
@@ -27,4 +28,5 @@ PageList:
 - file: connection-metro.html
 - file: help-metro.html
 - file: modals-metro.html
+- file: login-metro.html
 
