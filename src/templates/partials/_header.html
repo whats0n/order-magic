@@ -1,15 +1,17 @@
 <!-- begin header -->
 <header class="header">
 	{% if not noHeaderButtons %}
-		{% if back %}
-			<button class="header__back">
-				{{mixins.icon('arrow-left', name="spriteHeader")}}
-			</button>
-		{% else %}
-			<button class="header__btn-nav" data-modal-control="modal-nav">
-				<span></span>
-			</button>
-		{% endif %}
+	 	{% if not noHeaderButtonLeft %}
+			{% if back %}
+				<button class="header__back">
+					{{mixins.icon('arrow-left', name="spriteHeader")}}
+				</button>
+			{% else %}
+				<button class="header__btn-nav" data-modal-control="modal-nav">
+					<span></span>
+				</button>
+			{% endif %}
+	 	{% endif %}
 		<button class="header__btn-help">
 			{{mixins.icon('question-option', name="spriteHeader")}}
 		</button>
