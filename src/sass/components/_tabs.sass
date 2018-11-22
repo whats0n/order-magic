@@ -1,0 +1,25 @@
+.tabs
+	margin: 0 auto
+	max-width: 900px
+	&__controls
+		padding: 20px 0 20px
+		font-size: 0
+		text-align: center
+	&__control 
+		padding: 10px 
+		margin: 0 10px
+		border-bottom: 2px solid #ccc
+		width: 160px
+		color: #999
+		font-size: 18px
+		+sm 
+			width: 120px
+		&.is-active
+			border-color: $blue
+			color: $blue
+			+metro
+				border-color: $metroPrimary
+				color: $metroPrimary
+			+boost
+				border-color: $elevatePrimary
+				color: $elevatePrimary

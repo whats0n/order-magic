@@ -1,0 +1,155 @@
+<form action="/" class="form {{vendorSettings.classList}}">
+	<div class="tabs">
+		<div class="tabs__controls">
+			<button class="tabs__control" type="button">General</button>
+			<button class="tabs__control is-active" type="button">Advanced</button>
+		</div>
+		<div class="tabs__container">
+			<div class="tabs__content">
+				<div class="form-group form-group_simple">
+					<div class="form-group__row">
+						<div class="form-group__col">
+							{{mixins.checkbox({
+								classList: 'checkbox_middle',
+								title: 'Purchase Orders Discrepancy Alert'
+							})}}
+						</div>
+						<div class="form-group__col">
+							{{mixins.checkbox({
+								classList: 'checkbox_middle',
+								title: 'Receiving Discrepancy Alert'
+							})}}
+						</div>
+					</div>
+				</div>
+				<div class="form-group form-group_full">
+					<div class="form-group__label"><span>Send Notification To:</span></div>
+					<div class="form-group__field">
+						<input type="text" class="input form-group__input js-multi-input">
+					</div>
+				</div>
+				{% if vendorSettings.dateRange %}
+					{{mixins.group({
+						classList: 'form-group_multi',
+						label: 'Date range for the Sales Trend',
+						labelClassList: 'text-left',
+						select: {
+							classList: 'select_top',
+							options: [
+								'7 Days',
+								'14 Days',
+								'28 Days'
+							]
+						}
+					})}}
+				{% endif %}
+				<div class="v-settings" data-accordion-item>
+					<a href="#" class="v-settings__title" data-accordion-control>
+						Idoo Credentials {{mixins.icon('angle-down', 'v-settings__arrow')}}
+					</a>
+					<div class="v-settings__collapse" data-accordion-content>
+						<div class="search v-settings__search">
+							<button class="search__btn" type="button">
+								{{mixins.icon('search', 'search__icon')}}
+							</button>
+							<input type="text" class="search__input" placeholder="Search by Market Name">
+						</div>
+						<div class="v-settings__main">
+							<div class="v-settings__content">
+								<div class="table" data-table>
+									<div class="table__thead">
+										<div class="table__tr">
+											<div class="table__td" data-column="checkbox">
+												{{mixins.checkbox({
+													label: 'Qpay payment',
+													tooltip: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, eveniet!'
+												})}}
+											</div>
+											<div class="table__td" data-column="market" data-sorting="up">Market</div>
+											<div class="table__td" data-column="login" data-sorting="down">Login</div>
+											<div class="table__td" data-column="password">Password</div>
+											<div class="table__td" data-column="edit">&nbsp;</div>
+										</div>
+									</div>
+									<div class="table__tbody" data-scrollbar>
+										<div class="table__tbody-in" data-table-slider>
+											{% for item in [
+												{
+													market: 'Boston',
+													username: 'JDoe'
+												},
+												{
+													market: 'Memphis',
+													username: 'DJohnson'
+												},
+												{
+													market: 'New York',
+													username: 'ADickenson'
+												}
+											] %}
+												<div class="table__tr {% if loop.last %}is-readonly{% endif %} {% if loop.last %}is-active{% endif %}" data-table-row="{{loop.index}}">
+													<div class="table__td" data-column="checkbox" data-title="Qpay payment:">
+														{{mixins.checkbox({ classList: 'table__checkbox' })}}
+													</div>
+													<div class="table__td" data-column="market" data-title="Market:">
+														<div class="table__text">{{item.market}}</div>
+														<div class="table__field">
+															<input type="text" class="input input_sm table__input" value="{{item.market}}" readonly>
+														</div>
+													</div>
+													<div class="table__td" data-column="login" data-title="Login:">
+														<div class="table__text">{{item.username}}</div>
+														<div class="table__field">
+															<input type="text" class="input input_sm table__input" placeholder="User Name">
+															<div class="error-message table__error-message is-open">Lorem ipsum dolor sit amet.</div>
+														</div>
+													</div>
+													<div class="table__td" data-column="password" data-title="Password:">
+														<div class="table__text">Pass{{loop.index}}</div>
+														<div class="table__field js-toggle-password">
+															<button type="button" class="btn-toggle table__toggle-password js-toggle-password-control">
+																{{mixins.icon('eye-open', 'btn-toggle__visible')}}
+																{{mixins.icon('eye-close', 'btn-toggle__hidden')}}
+															</button>
+															<input type="password" class="input input_sm table__input js-toggle-password-input" placeholder="Password">
+														</div>
+													</div>
+													<div class="table__td" data-column="edit">
+														<button type="button" class="table__btn table__edit" data-table-edit>{{mixins.icon('edit')}}</button>
+														<button type="button" class="table__btn table__close" data-table-edit>{{mixins.icon('close')}}</button>
+														<div class="table__btns">
+															<div class="table__btns-col">
+																<button type="button" class="table__btn table__save" data-table-submit>{{mixins.icon('check')}}</button>
+															</div>
+															<div class="table__btns-col">
+																<button type="button" class="table__btn table__cancel" data-table-edit>{{mixins.icon('undo')}}</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											{% endfor %}
+										</div>
+									</div>
+									<div class="table__caption" data-table-caption></div>
+								</div>
+								<div class="v-settings__loader" data-loader>
+									<div class="v-settings__loader-in"></div>
+									<div class="v-settings__loader-in"></div>
+									<div class="v-settings__loader-in"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form__row form__footer">
+					<div class="form__col">
+						<button class="btn btn_wide">Save</button>
+					</div>
+					<div class="form__col">
+						<button class="btn btn_gray btn_wide">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>

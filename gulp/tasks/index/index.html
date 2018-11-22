@@ -9,7 +9,7 @@
 	<ol>
 		<% _.each(pages.PageList, function(page) { %>
 			<li>
-				<a target="_blank" href="<%= page.file %>"><%= _.split(page.file, '.', 1) %></a>
+				<a target="_blank" href="<%= page.file %>"><%= page.file %></a>
 			</li>
 		<% }) %>
 	</ol>
