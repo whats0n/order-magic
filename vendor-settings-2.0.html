@@ -1,0 +1,273 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>order magic settings</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css"> </head>
+
+  <body>
+    <!-- begin header -->
+    <header class="header"> <button class="header__back">
+					
+<svg class="icon icon-arrow-left "><use xlink:href="img/spriteHeader.svg#icon-arrow-left"></use></svg>
+
+				</button> <button class="header__btn-help">
+			
+<svg class="icon icon-question-option "><use xlink:href="img/spriteHeader.svg#icon-question-option"></use></svg>
+
+		</button>
+      <div class="header__inner">
+        <div class="header__title">order magic settings</div>
+      </div>
+    </header>
+    <!-- end header -->
+    <!-- BEGIN content -->
+    <div class="container">
+      <form action="/" class="form ">
+        <div class="tabs">
+          <div class="tabs__controls"> <button class="tabs__control" type="button">General</button> <button class="tabs__control is-active" type="button">Advanced</button> </div>
+          <div class="tabs__container">
+            <div class="tabs__content">
+              <div class="form-group form-group_simple">
+                <div class="form-group__row">
+                  <div class="form-group__col"> <label class="checkbox checkbox_middle">
+	<input type="checkbox" >
+	<span class="checkbox__icon">
+		
+<svg class="icon icon-check "><use xlink:href="img/sprite.svg#icon-check"></use></svg>
+
+	</span>
+	
+		<span class="checkbox__title">Purchase Orders Discrepancy Alert</span>
+	
+</label> </div>
+                  <div class="form-group__col"> <label class="checkbox checkbox_middle">
+	<input type="checkbox" >
+	<span class="checkbox__icon">
+		
+<svg class="icon icon-check "><use xlink:href="img/sprite.svg#icon-check"></use></svg>
+
+	</span>
+	
+		<span class="checkbox__title">Receiving Discrepancy Alert</span>
+	
+</label> </div>
+                </div>
+              </div>
+              <div class="form-group form-group_full">
+                <div class="form-group__label"><span>Send Notification To:</span></div>
+                <div class="form-group__field"> <input type="text" class="input form-group__input js-multi-input"> </div>
+              </div>
+              <div class="v-settings" data-accordion-item> <a href="#" class="v-settings__title" data-accordion-control>
+						Idoo Credentials 
+<svg class="icon icon-angle-down v-settings__arrow"><use xlink:href="img/sprite.svg#icon-angle-down"></use></svg>
+
+					</a>
+                <div class="v-settings__collapse" data-accordion-content>
+                  <div class="search v-settings__search"> <button class="search__btn" type="button">
+								
+<svg class="icon icon-search search__icon"><use xlink:href="img/sprite.svg#icon-search"></use></svg>
+
+							</button> <input type="text" class="search__input" placeholder="Search by Market Name"> </div>
+                  <div class="v-settings__main">
+                    <div class="v-settings__content">
+                      <div class="table" data-table>
+                        <div class="table__thead">
+                          <div class="table__tr">
+                            <div class="table__td" data-column="checkbox"> <label class="checkbox ">
+	<input type="checkbox" >
+	<span class="checkbox__icon">
+		
+<svg class="icon icon-check "><use xlink:href="img/sprite.svg#icon-check"></use></svg>
+
+	</span>
+	
+</label> </div>
+                            <div class="table__td" data-column="market" data-sorting="up">Market</div>
+                            <div class="table__td" data-column="login" data-sorting="down">Login</div>
+                            <div class="table__td" data-column="password">Password</div>
+                            <div class="table__td" data-column="edit">&nbsp;</div>
+                          </div>
+                        </div>
+                        <div class="table__tbody" data-scrollbar>
+                          <div class="table__tbody-in" data-table-slider>
+                            <div class="table__tr  " data-table-row="1">
+                              <div class="table__td" data-column="checkbox" data-title="Qpay payment:"> <label class="checkbox table__checkbox">
+	<input type="checkbox" >
+	<span class="checkbox__icon">
+		
+<svg class="icon icon-check "><use xlink:href="img/sprite.svg#icon-check"></use></svg>
+
+	</span>
+	
+</label> </div>
+                              <div class="table__td" data-column="market" data-title="Market:">
+                                <div class="table__text">Boston</div>
+                                <div class="table__field"> <input type="text" class="input input_sm table__input" value="Boston" readonly> </div>
+                              </div>
+                              <div class="table__td" data-column="login" data-title="Login:">
+                                <div class="table__text">JDoe</div>
+                                <div class="table__field"> <input type="text" class="input input_sm table__input" placeholder="User Name">
+                                  <div class="error-message table__error-message is-open">Lorem ipsum dolor sit amet.</div>
+                                </div>
+                              </div>
+                              <div class="table__td" data-column="password" data-title="Password:">
+                                <div class="table__text">Pass1</div>
+                                <div class="table__field js-toggle-password"> <button type="button" class="btn-toggle table__toggle-password js-toggle-password-control">
+																
+<svg class="icon icon-eye-open btn-toggle__visible"><use xlink:href="img/sprite.svg#icon-eye-open"></use></svg>
+
+																
+<svg class="icon icon-eye-close btn-toggle__hidden"><use xlink:href="img/sprite.svg#icon-eye-close"></use></svg>
+
+															</button> <input type="password" class="input input_sm table__input js-toggle-password-input" placeholder="Password"> </div>
+                              </div>
+                              <div class="table__td" data-column="edit"> <button type="button" class="table__btn table__edit" data-table-edit>
+<svg class="icon icon-edit "><use xlink:href="img/sprite.svg#icon-edit"></use></svg>
+</button> <button type="button" class="table__btn table__close" data-table-edit>
+<svg class="icon icon-close "><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+</button>
+                                <div class="table__btns">
+                                  <div class="table__btns-col"> <button type="button" class="table__btn table__save" data-table-submit>
+<svg class="icon icon-check "><use xlink:href="img/sprite.svg#icon-check"></use></svg>
+</button> </div>
+                                  <div class="table__btns-col"> <button type="button" class="table__btn table__cancel" data-table-edit>
+<svg class="icon icon-undo "><use xlink:href="img/sprite.svg#icon-undo"></use></svg>
+</button> </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="table__tr  " data-table-row="2">
+                              <div class="table__td" data-column="checkbox" data-title="Qpay payment:"> <label class="checkbox table__checkbox">
+	<input type="checkbox" >
+	<span class="checkbox__icon">
+		
+<svg class="icon icon-check "><use xlink:href="img/sprite.svg#icon-check"></use></svg>
+
+	</span>
+	
+</label> </div>
+                              <div class="table__td" data-column="market" data-title="Market:">
+                                <div class="table__text">Memphis</div>
+                                <div class="table__field"> <input type="text" class="input input_sm table__input" value="Memphis" readonly> </div>
+                              </div>
+                              <div class="table__td" data-column="login" data-title="Login:">
+                                <div class="table__text">DJohnson</div>
+                                <div class="table__field"> <input type="text" class="input input_sm table__input" placeholder="User Name">
+                                  <div class="error-message table__error-message is-open">Lorem ipsum dolor sit amet.</div>
+                                </div>
+                              </div>
+                              <div class="table__td" data-column="password" data-title="Password:">
+                                <div class="table__text">Pass2</div>
+                                <div class="table__field js-toggle-password"> <button type="button" class="btn-toggle table__toggle-password js-toggle-password-control">
+																
+<svg class="icon icon-eye-open btn-toggle__visible"><use xlink:href="img/sprite.svg#icon-eye-open"></use></svg>
+
+																
+<svg class="icon icon-eye-close btn-toggle__hidden"><use xlink:href="img/sprite.svg#icon-eye-close"></use></svg>
+
+															</button> <input type="password" class="input input_sm table__input js-toggle-password-input" placeholder="Password"> </div>
+                              </div>
+                              <div class="table__td" data-column="edit"> <button type="button" class="table__btn table__edit" data-table-edit>
+<svg class="icon icon-edit "><use xlink:href="img/sprite.svg#icon-edit"></use></svg>
+</button> <button type="button" class="table__btn table__close" data-table-edit>
+<svg class="icon icon-close "><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+</button>
+                                <div class="table__btns">
+                                  <div class="table__btns-col"> <button type="button" class="table__btn table__save" data-table-submit>
+<svg class="icon icon-check "><use xlink:href="img/sprite.svg#icon-check"></use></svg>
+</button> </div>
+                                  <div class="table__btns-col"> <button type="button" class="table__btn table__cancel" data-table-edit>
+<svg class="icon icon-undo "><use xlink:href="img/sprite.svg#icon-undo"></use></svg>
+</button> </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="table__tr is-readonly is-active" data-table-row="3">
+                              <div class="table__td" data-column="checkbox" data-title="Qpay payment:"> <label class="checkbox table__checkbox">
+	<input type="checkbox" >
+	<span class="checkbox__icon">
+		
+<svg class="icon icon-check "><use xlink:href="img/sprite.svg#icon-check"></use></svg>
+
+	</span>
+	
+</label> </div>
+                              <div class="table__td" data-column="market" data-title="Market:">
+                                <div class="table__text">New York</div>
+                                <div class="table__field"> <input type="text" class="input input_sm table__input" value="New York" readonly> </div>
+                              </div>
+                              <div class="table__td" data-column="login" data-title="Login:">
+                                <div class="table__text">ADickenson</div>
+                                <div class="table__field"> <input type="text" class="input input_sm table__input" placeholder="User Name">
+                                  <div class="error-message table__error-message is-open">Lorem ipsum dolor sit amet.</div>
+                                </div>
+                              </div>
+                              <div class="table__td" data-column="password" data-title="Password:">
+                                <div class="table__text">Pass3</div>
+                                <div class="table__field js-toggle-password"> <button type="button" class="btn-toggle table__toggle-password js-toggle-password-control">
+																
+<svg class="icon icon-eye-open btn-toggle__visible"><use xlink:href="img/sprite.svg#icon-eye-open"></use></svg>
+
+																
+<svg class="icon icon-eye-close btn-toggle__hidden"><use xlink:href="img/sprite.svg#icon-eye-close"></use></svg>
+
+															</button> <input type="password" class="input input_sm table__input js-toggle-password-input" placeholder="Password"> </div>
+                              </div>
+                              <div class="table__td" data-column="edit"> <button type="button" class="table__btn table__edit" data-table-edit>
+<svg class="icon icon-edit "><use xlink:href="img/sprite.svg#icon-edit"></use></svg>
+</button> <button type="button" class="table__btn table__close" data-table-edit>
+<svg class="icon icon-close "><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+</button>
+                                <div class="table__btns">
+                                  <div class="table__btns-col"> <button type="button" class="table__btn table__save" data-table-submit>
+<svg class="icon icon-check "><use xlink:href="img/sprite.svg#icon-check"></use></svg>
+</button> </div>
+                                  <div class="table__btns-col"> <button type="button" class="table__btn table__cancel" data-table-edit>
+<svg class="icon icon-undo "><use xlink:href="img/sprite.svg#icon-undo"></use></svg>
+</button> </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="table__caption" data-table-caption></div>
+                      </div>
+                      <div class="v-settings__loader" data-loader>
+                        <div class="v-settings__loader-in"></div>
+                        <div class="v-settings__loader-in"></div>
+                        <div class="v-settings__loader-in"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form__row form__footer">
+                <div class="form__col"> <button class="btn btn_wide">Save</button> </div>
+                <div class="form__col"> <button class="btn btn_gray btn_wide">Cancel</button> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- END content -->
+    <!-- begin footer -->
+    <footer class="footer">
+      <ul class="footer__list">
+        <li class="footer__item">&copy BTB Soft, Inc</li>
+        <li class="footer__item"> <a href="https://b2bsoft.com/" class="footer__link">www.b2bsoft.com</a> </li>
+      </ul>
+    </footer>
+    <!-- end footer -->
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
+  </body>
+
+</html>
