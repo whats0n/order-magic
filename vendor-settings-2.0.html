@@ -29,10 +29,119 @@
     <!-- BEGIN content -->
     <div class="container">
       <form action="/" class="form ">
-        <div class="tabs">
-          <div class="tabs__controls"> <button class="tabs__control" type="button">General</button> <button class="tabs__control is-active" type="button">Advanced</button> </div>
+        <div class="tabs js-tabs">
+          <div class="tabs__controls"> <button class="tabs__control js-tabs-control is-active" data-tabs-control="general" type="button">General</button> <button class="tabs__control js-tabs-control" data-tabs-control="advanced" type="button">Advanced</button> </div>
           <div class="tabs__container">
-            <div class="tabs__content">
+            <div class="tabs__content js-tabs-content is-active" data-tabs-content="general">
+              <div class="form-group form-group_simple">
+                <div class="form-group__row">
+                  <div class="form-group__col">
+                    <div class="form-group__label"><span>Vendor:</span></div>
+                  </div>
+                  <div class="form-group__col">
+                    <div class="form-group__value">Metro By T-Mobile <span>(REF#VDR#METROPCS)</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group form-group_columns">
+                <div class="form-group__label text-left"><span>Department:</span></div>
+                <div class="form-group__field">
+                  <div class="select " data-select>
+                    <div class="select__header"> <svg class="icon icon-angle-down select__arrow"><use xlink:href="img/sprite.svg#icon-angle-down"></use></svg>
+                      <div class="select__value" data-select-value></div>
+                    </div>
+                    <div class="select__body">
+                      <ul class="select__list">
+                        <li class="select__option" data-select-option>Order Magic</li>
+                        <li class="select__option" data-select-option>Order Magic 1</li>
+                        <li class="select__option" data-select-option>Order Magic 2</li>
+                        <li class="select__option" data-select-option>Order Magic 3</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group form-group_columns">
+                <div class="form-group__label text-left"><span>Category:</span></div>
+                <div class="form-group__field">
+                  <div class="select " data-select>
+                    <div class="select__header"> <svg class="icon icon-angle-down select__arrow"><use xlink:href="img/sprite.svg#icon-angle-down"></use></svg>
+                      <div class="select__value" data-select-value></div>
+                    </div>
+                    <div class="select__body">
+                      <ul class="select__list">
+                        <li class="select__option" data-select-option>Alphacomm</li>
+                        <li class="select__option" data-select-option>Alphacomm 1</li>
+                        <li class="select__option" data-select-option>Alphacomm 2</li>
+                        <li class="select__option" data-select-option>Alphacomm 3</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group form-group_switch form-group_columns">
+                <div class="form-group__label text-left"><span>Increase product cost by:</span></div>
+                <div class="form-group__field">
+                  <div class="form-group__switcher form-group__switcher_absolute"> <label class="awesome-switcher awesome-switcher_absolute">
+					<input type="checkbox" checked>
+					<span class="awesome-switcher__content">
+						<span class="awesome-switcher__left">$</span>
+						<span class="awesome-switcher__control"></span>
+						<span class="awesome-switcher__right">%</span>
+					</span>
+				</label> </div>
+                  <div class="form-group__input-wrapper"> <input type="text" class="input form-group__input text-right"> </div>
+                </div>
+              </div>
+              <div class="form-group form-group_switch form-group_columns">
+                <div class="form-group__label text-left"><span>SIM Inventory Type:</span></div>
+                <div class="form-group__field">
+                  <div class="form-group__switcher form-group__switcher_absolute"> <label class="awesome-switcher awesome-switcher_absolute">
+					<input type="checkbox" checked>
+					<span class="awesome-switcher__content">
+						<span class="awesome-switcher__left">Serialized</span>
+						<span class="awesome-switcher__control"></span>
+						<span class="awesome-switcher__right">Standard</span>
+					</span>
+				</label> </div>
+                </div>
+              </div>
+              <div class="form-group form-group_switch form-group_columns">
+                <div class="form-group__label text-left"><span>Add Display Phones to Inventory:</span></div>
+                <div class="form-group__field">
+                  <div class="form-group__switcher form-group__switcher_absolute"> <label class="awesome-switcher awesome-switcher_absolute">
+					<input type="checkbox" checked>
+					<span class="awesome-switcher__content">
+						<span class="awesome-switcher__left">Yes</span>
+						<span class="awesome-switcher__control"></span>
+						<span class="awesome-switcher__right">No</span>
+					</span>
+				</label> </div>
+                </div>
+              </div>
+              <div class="form-group form-group_multi form-group_columns">
+                <div class="form-group__label text-left"><span>Date range for the Sales Trend:</span></div>
+                <div class="form-group__field">
+                  <div class="select select_top" data-select>
+                    <div class="select__header"> <svg class="icon icon-angle-down select__arrow"><use xlink:href="img/sprite.svg#icon-angle-down"></use></svg>
+                      <div class="select__value" data-select-value></div>
+                    </div>
+                    <div class="select__body">
+                      <ul class="select__list">
+                        <li class="select__option" data-select-option>7 Days</li>
+                        <li class="select__option" data-select-option>14 Days</li>
+                        <li class="select__option" data-select-option>28 Days</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form__row form__footer">
+                <div class="form__col"> <button class="btn btn_wide">Save</button> </div>
+                <div class="form__col"> <button class="btn btn_gray btn_wide">Cancel</button> </div>
+              </div>
+            </div>
+            <div class="tabs__content js-tabs-content" data-tabs-content="advanced">
               <div class="form-group form-group_simple">
                 <div class="form-group__row">
                   <div class="form-group__col"> <label class="checkbox checkbox_middle">
