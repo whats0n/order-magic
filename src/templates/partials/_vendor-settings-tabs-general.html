@@ -1,0 +1,91 @@
+<div class="form-group form-group_simple">
+	<div class="form-group__row">
+		<div class="form-group__col">
+			<div class="form-group__label"><span>Vendor:</span></div>
+		</div>
+		<div class="form-group__col">
+			<div class="form-group__value">Metro By T-Mobile <span>(REF#VDR#METROPCS)</span></div>
+		</div>
+	</div>
+</div>
+{{mixins.group({
+	label: 'Department',
+	labelClassList: 'text-left',
+	classList: 'form-group_columns',
+	select: {
+		options: [
+			'Order Magic',
+			'Order Magic 1',
+			'Order Magic 2',
+			'Order Magic 3'
+		]
+	}
+})}}
+{{mixins.group({
+	label: 'Category',
+	labelClassList: 'text-left',
+	classList: 'form-group_columns',
+	select: {
+		options: [
+			'Alphacomm',
+			'Alphacomm 1',
+			'Alphacomm 2',
+			'Alphacomm 3'
+		]
+	}
+})}}
+{{mixins.group({
+	classList: 'form-group_switch form-group_columns',
+	label: 'Increase product cost by',
+	labelClassList: 'text-left',
+	input: { classList: 'text-right' },
+	switcher: {
+		containerClassList: 'form-group__switcher_absolute',
+		classList: 'awesome-switcher_absolute',
+		left: '$',
+		right: '%'
+	}
+})}}
+{{mixins.group({
+	classList: 'form-group_switch form-group_columns',
+	label: 'SIM Inventory Type',
+	labelClassList: 'text-left',
+	switcher: {
+		containerClassList: 'form-group__switcher_absolute',
+		classList: 'awesome-switcher_absolute',
+		left: 'Serialized',
+		right: 'Standard'
+	}
+})}}
+{{mixins.group({
+	classList: 'form-group_switch form-group_columns',
+	label: 'Add Display Phones to Inventory',
+	labelClassList: 'text-left',
+	switcher: {
+		containerClassList: 'form-group__switcher_absolute',
+		classList: 'awesome-switcher_absolute',
+		left: 'Yes',
+		right: 'No'
+	}
+})}}
+{{mixins.group({
+	classList: 'form-group_multi form-group_columns',
+	label: 'Date range for the Sales Trend',
+	labelClassList: 'text-left',
+	select: {
+		classList: 'select_top',
+		options: [
+			'7 Days',
+			'14 Days',
+			'28 Days'
+		]
+	}
+})}}
+<div class="form__row form__footer">
+	<div class="form__col">
+		<button class="btn btn_wide">Save</button>
+	</div>
+	<div class="form__col">
+		<button class="btn btn_gray btn_wide">Cancel</button>
+	</div>
+</div>
