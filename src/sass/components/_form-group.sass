@@ -42,6 +42,34 @@
 				width: 50%
 				+sm 
 					width: 100%
+	&_switcher-center
+		.form-group 
+			&__label
+				+md 
+					width: 40%
+			&__field
+				font-size: 0
+				text-align: center
+				+r(740)
+					padding-right: 70px
+				+md 
+					padding-right: 10px
+					width: 60%
+					text-align: left
+			&__switcher
+				float: none
+				+md 
+					float: left
+			&__input-wrapper
+				margin-right: -90px
+				+md
+					display: block
+					overflow: hidden
+					margin-right: 0
+			&__switcher,
+			&__input-wrapper
+				display: inline-block
+				vertical-align: top
 	&__label,
 	&__field,
 		float: left
