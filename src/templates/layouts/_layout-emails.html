@@ -69,11 +69,13 @@
 							</table>
 						{% else %}
 							<table style="table-layout: fixed; margin: 15px 0; border-collapse: collapse; border-spacing: 0; width: 100%;">
-								<tr>
-									<td style="padding-left: 50px; {% if item.body[0].color %}color: {{item.body[0].color}};{% endif %}">{{item.body[0].text | safe}}</td>
-									<td style="{% if item.body[1].color %}color: {{item.body[1].color}};{% endif %} text-align: center;">{{item.body[1].text | safe}}</td>
-									<td style="{% if item.body[1].color %}color: {{item.body[1].color}};{% endif %} text-align: center;">{{item.body[2].text | safe}}</td>
-								</tr>
+								{% for item in item.body %}
+									<tr>
+										<td style="padding-left: 50px; {% if item.body[0].color %}color: {{item[0].color}};{% endif %}">{{item[0].text | safe}}</td>
+										<td style="{% if item[1].color %}color: {{item[1].color}};{% endif %} text-align: center;">{{item[1].text | safe}}</td>
+										<td style="{% if item[2].color %}color: {{item[2].color}};{% endif %} text-align: center;">{{item[2].text | safe}}</td>
+									</tr>
+								{% endfor %}
 							</table>
 						{% endif %}
 					{% endfor %}

@@ -2,11 +2,10 @@
   "presets": [
     [
       "env", {
-      "targets": {
+        "targets": {
           "browsers": ["last 2 versions"]
         }
       }
     ]
-  ], 
-  "plugins": ["transform-object-rest-spread", "transform-es2015-spread", "transform-es2015-destructuring"]
+  ]
 }

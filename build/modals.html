@@ -8,28 +8,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" media="all" href="css/app.css"> </head>
+    <link rel="stylesheet" media="all" href="css/app.css">
+  </head>
 
   <body>
     <!-- begin header -->
-    <header class="header"> <button class="header__btn-nav" data-modal-control="modal-nav">
-					<span></span>
-				</button> <button class="header__btn-help">
-			
-<svg class="icon icon-question-option "><use xlink:href="img/spriteHeader.svg#icon-question-option"></use></svg>
-
-		</button>
+    <header class="header">
+      <button class="header__btn-nav" data-modal-control="modal-nav">
+        <span></span>
+      </button>
+      <button class="header__btn-help">
+        <svg class="icon icon-question-option ">
+          <use xlink:href="img/spriteHeader.svg#icon-question-option"></use>
+        </svg>
+      </button>
       <div class="header__inner">
-        <div class="header__title"></div> <img src="img/b2b-white.svg" alt="B2BSoft" class="header__logo "> </div>
+        <div class="header__title"></div>
+        <img src="img/b2b-white.svg" alt="B2BSoft" class="header__logo ">
+      </div>
     </header>
     <!-- end header -->
     <!-- BEGIN content -->
     <div class="container">
       <ul>
-        <li> <a href="#" data-modal-control="modal-setup">modal-setup</a> </li>
-        <li> <a href="#" data-modal-control="modal-info">modal-info</a> </li>
-        <li> <a href="#" data-modal-control="modal-error">modal-error</a> </li>
-        <li> <a href="#" data-modal-control="save-changes">save-changes</a> </li>
+        <li>
+          <a href="#" data-modal-control="modal-setup">modal-setup</a>
+        </li>
+        <li>
+          <a href="#" data-modal-control="modal-info">modal-info</a>
+        </li>
+        <li>
+          <a href="#" data-modal-control="modal-error">modal-error</a>
+        </li>
+        <li>
+          <a href="#" data-modal-control="save-changes">save-changes</a>
+        </li>
       </ul>
       <div class="modal modal_sm" data-modal="modal-setup">
         <div class="modal__container" data-modal-container>
@@ -62,23 +75,31 @@
               </div>
               <div class="form-group ">
                 <div class="form-group__label "><span>Username:</span></div>
-                <div class="form-group__field"> <input type="text" class="input form-group__input"> </div>
+                <div class="form-group__field">
+                  <input type="text" class="input form-group__input">
+                </div>
               </div>
               <div class="form-group ">
                 <div class="form-group__label "><span>Password:</span></div>
-                <div class="form-group__field"> <input type="text" class="input form-group__input"> </div>
+                <div class="form-group__field">
+                  <input type="text" class="input form-group__input">
+                </div>
               </div>
             </div>
-            <div class="modal-content__footer"> <button class="btn modal-content__btn" data-modal-close>Save</button> <button class="btn btn_red modal-content__btn" data-modal-close>Cancel</button> </div>
+            <div class="modal-content__footer">
+              <button class="btn modal-content__btn" data-modal-close>Save</button>
+              <button class="btn btn_red modal-content__btn" data-modal-close>Cancel</button>
+            </div>
           </div>
         </div>
       </div>
       <div class="modal modal_sm" data-modal="modal-info">
-        <div class="modal__container" data-modal-container> <button class="modal__close" data-modal-close>
-			
-<svg class="icon icon-close "><use xlink:href="img/sprite.svg#icon-close"></use></svg>
-
-		</button>
+        <div class="modal__container" data-modal-container>
+          <button class="modal__close" data-modal-close>
+            <svg class="icon icon-close ">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
           <div class="modal-content">
             <div class="modal-content__header">
               <div class="modal-content__title">Info: header</div>
@@ -89,16 +110,19 @@
               <p>Info: item 3</p>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque optio culpa architecto incidunt obcaecati quidem, sapiente officia quasi nihil consectetur.</p>
             </div>
-            <div class="modal-content__footer"> <button class="btn modal-content__btn" data-modal-close>OK</button> </div>
+            <div class="modal-content__footer">
+              <button class="btn modal-content__btn" data-modal-close>OK</button>
+            </div>
           </div>
         </div>
       </div>
       <div class="modal modal_sm" data-modal="modal-error">
-        <div class="modal__container" data-modal-container> <button class="modal__close" data-modal-close>
-			
-<svg class="icon icon-close "><use xlink:href="img/sprite.svg#icon-close"></use></svg>
-
-		</button>
+        <div class="modal__container" data-modal-container>
+          <button class="modal__close" data-modal-close>
+            <svg class="icon icon-close ">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
           <div class="modal-content">
             <div class="modal-content__header">
               <div class="modal-content__title">Error</div>
@@ -110,16 +134,20 @@
                 </div>
               </div>
             </div>
-            <div class="modal-content__footer"> <button class="btn modal-content__btn" data-modal-close>Setup</button> <button class="btn modal-content__btn" data-modal-close>OK</button> </div>
+            <div class="modal-content__footer">
+              <button class="btn modal-content__btn" data-modal-close>Setup</button>
+              <button class="btn modal-content__btn" data-modal-close>OK</button>
+            </div>
           </div>
         </div>
       </div>
       <div class="modal modal_md" data-modal="save-changes">
-        <div class="modal__container" data-modal-container> <button class="modal__close" data-modal-close>
-			
-<svg class="icon icon-close "><use xlink:href="img/sprite.svg#icon-close"></use></svg>
-
-		</button>
+        <div class="modal__container" data-modal-container>
+          <button class="modal__close" data-modal-close>
+            <svg class="icon icon-close ">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
           <div class="modal-content">
             <div class="modal-content__header">
               <div class="modal-content__title">Save Changes?</div>
@@ -131,7 +159,11 @@
                 </div>
               </div>
             </div>
-            <div class="modal-content__footer"> <button class="btn modal-content__btn" data-modal-close>Yes</button> <button class="btn btn_gray modal-content__btn" data-modal-close>No</button> <button class="btn btn_gray modal-content__btn" data-modal-close>Cancel</button> </div>
+            <div class="modal-content__footer">
+              <button class="btn modal-content__btn" data-modal-close>Yes</button>
+              <button class="btn btn_gray modal-content__btn" data-modal-close>No</button>
+              <button class="btn btn_gray modal-content__btn" data-modal-close>Cancel</button>
+            </div>
           </div>
         </div>
       </div>
@@ -141,7 +173,9 @@
     <footer class="footer">
       <ul class="footer__list">
         <li class="footer__item">&copy BTB Soft, Inc</li>
-        <li class="footer__item"> <a href="https://b2bsoft.com/" class="footer__link">www.b2bsoft.com</a> </li>
+        <li class="footer__item">
+          <a href="https://b2bsoft.com/" class="footer__link">www.b2bsoft.com</a>
+        </li>
       </ul>
     </footer>
     <!-- end footer -->
