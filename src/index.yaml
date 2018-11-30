@@ -16,6 +16,7 @@ PageList:
 - file: modals.html
 - file: login.html
 - file: vendor-settings-2.0.html
+- file: vendor-settings-3.0.html
 
 - file: home-metro.html
 - file: home-v2-metro.html
