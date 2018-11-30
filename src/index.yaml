@@ -32,6 +32,7 @@ PageList:
 - file: modals-metro.html
 - file: login-metro.html
 - file: vendor-settings-2.0-metro.html
+- file: vendor-settings-3.0-metro.html
 
 - file: email-simple.html
 - file: email-error.html
