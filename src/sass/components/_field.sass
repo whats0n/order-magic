@@ -5,6 +5,8 @@
       &__clear
         opacity: 1
         visibility: visible
+        +hover
+          color: $darkGray
       &__input
         padding-right: 50px
   &__clear
@@ -13,12 +15,16 @@
     right: 0
     bottom: 0    
     width: 50px
+    color: $blue
     opacity: 0
     visibility: hidden
     background: none
     +vertical
-    transition: opacity 0.25s, visibility 0.25s
+    transition: color 0.25s, opacity 0.25s, visibility 0.25s
+    +metro
+      color: $metroSecondary
     &-icon 
       display: inline-block
       vertical-align: middle
+      fill: currentColor
       font-size: 14px
