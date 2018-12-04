@@ -13,7 +13,12 @@
 		}
 	] %}
 		<div class="login__field">
-			<input type="{{item.type or 'text'}}" placeholder="{{item.placeholder}}" class="input input_md">
+			<div class="field js-field">
+				<button class="field__clear">
+					{{mixins.icon('close', 'field__clear-icon')}}
+				</button>
+				<input type="{{item.type or 'text'}}" placeholder="{{item.placeholder}}" class="input input_md field__input js-field-input">
+			</div>
 		</div>
 	{% endfor %}
 	<div class="login__field">
