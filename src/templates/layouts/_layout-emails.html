@@ -14,8 +14,8 @@
 							<img src="img/b2b-white.png" alt="B2BSoft" style="width: 50px;" width="50">
 						</td>
 						<td style="padding: 10px; font-size: 20px; font-weight: 700; text-align: center;">
-							<p style="padding: 0; margin: 0;">Friday, November 23, 2018</p>
 							<p style="padding: 0; margin: 0;">Daily Orders Descrapancy Alert</p>
+							<p style="padding: 0; margin: 0;">Friday, November 23, 2018</p>
 						</td>
 						<td style="vertical-align: top; padding: 20px; width: 50px; font-size: 0;">
 							<img src="img/ordermagic-mail-logo.png" alt="Wireless" style="width: 50px;" width="50">
@@ -59,32 +59,33 @@
 						</tr>
 					</table>
 					{% if item.orders %}
-					{% set orders = item.orders %}
-					<!-- begin orders info -->
-						<table style="table-layout: fixed; margin: 0; border-collapse: collapse; border-spacing: 0; width: 100%; background: #e8e8e8;">
-							<tr>
-								<td style="padding: 13px; color: #3893d3;">{{orders.main[0].text | safe}}</td>
-								<td style="padding: 13px;">{{orders.main[1].text | safe}}</td>
-								<td style="padding: 13px;">{{orders.main[2].text | safe}}</td>
-							</tr>
-						</table>
-						<table style="table-layout: fixed; margin: 15px 0; border-collapse: collapse; border-spacing: 0; width: 100%;">
-							{% if orders.headings %}
+						{% for order in item.orders %}
+							<!-- begin orders info -->
+							<table style="table-layout: fixed; margin: 0; border-collapse: collapse; border-spacing: 0; width: 100%; background: #e8e8e8;">
 								<tr>
-									<td style="padding-left: 50px;"></td>
-									<td style="text-align: center;">Idoo</td>
-									<td style="text-align: center;">Wireless Standard</td>
+									<td style="padding: 13px; color: #3893d3;">{{order.main[0].text | safe}}</td>
+									<td style="padding: 13px;">{{order.main[1].text | safe}}</td>
+									<td style="padding: 13px;">{{order.main[2].text | safe}}</td>
 								</tr>
-							{% endif %}
-							{% for item in orders.table %}
-								<tr>
-									<td style="padding: 2px 5px 2px 50px;">{{item[0].text | safe}}</td>
-									<td style="padding: 2px 5px;{% if item[1].color %} color: {{item[1].color}};{% endif %} text-align: center;">{{item[1].text | safe}}</td>
-									<td style="padding: 2px 5px;{% if item[2].color %} color: {{item[2].color}};{% endif %} text-align: center;">{{item[2].text | safe}}</td>
-								</tr>
-							{% endfor %}
-						</table>
-					<!-- end orders info -->
+							</table>
+							<table style="table-layout: fixed; margin: 15px 0; border-collapse: collapse; border-spacing: 0; width: 100%;">
+								{% if order.headings %}
+									<tr>
+										<td style="padding: 2px 5px 2px 50px;"></td>
+										<td style="padding: 2px 5px 2px;text-align: center;">Idoo</td>
+										<td style="padding: 2px 5px 2px;text-align: center;">Wireless Standard</td>
+									</tr>
+								{% endif %}
+								{% for item in order.table %}
+									<tr>
+										<td style="padding: 2px 5px 2px 50px;">{{item[0].text | safe}}</td>
+										<td style="padding: 2px 5px;{% if item[1].color %} color: {{item[1].color}};{% endif %} text-align: center;">{{item[1].text | safe}}</td>
+										<td style="padding: 2px 5px;{% if item[2].color %} color: {{item[2].color}};{% endif %} text-align: center;">{{item[2].text | safe}}</td>
+									</tr>
+								{% endfor %}
+							</table>
+							<!-- end orders info -->
+						{% endfor %}
 					{% endif %}
 					{% for item in item.list %}
 						{% if item.header %}
