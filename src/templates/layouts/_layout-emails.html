@@ -3,21 +3,26 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<!--[if mso]>
+	<style type="text/css">
+		body, table, td {font-family: Arial, Helvetica, sans-serif !important;}
+	</style>
+	<![endif]-->
 </head>
-<body style="padding: 0; margin: 0; background: #f2f2f2; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.3;">
-	<table style="table-layout: fixed; margin: 0 auto; border-collapse: collapse; border-spacing: 0; width: 100%; max-width: 600px;">
+<body style="padding: 0; margin: 0; background: #f2f2f2; font-family: Arial, Helvetica, sans-serif !important; font-size: 16px; line-height: 1.3;">
+	<table border="0" cellspacing="0" cellpadding="0" width="600" style="table-layout: fixed; padding: 0; margin: 0 auto; border-collapse: collapse; border-spacing: 0; width: 100%; max-width: 600px;">
 		<tr>
 			<td style="padding: 0;">
-				<table style="table-layout: fixed; margin: 0; border-collapse: collapse; border-spacing: 0; width: 100%; color: #fff; background: #3893d3;">
+				<table border="0" cellspacing="0" cellpadding="0" style="table-layout: fixed; margin: 0; border-collapse: collapse; border-spacing: 0; width: 100%; color: #fff; background: #3893d3;">
 					<tr>
-						<td style="vertical-align: top; padding: 20px; width: 50px; font-size: 0;">
+						<td style="vertical-align: top; padding: 20px 5px 20px 10px; width: 50px; font-size: 0;">
 							<img src="img/b2b-white.png" alt="B2BSoft" style="width: 50px;" width="50">
 						</td>
-						<td style="padding: 10px; font-size: 20px; font-weight: 700; text-align: center;">
+						<td style="padding: 10px 5px; font-size: 18px; font-weight: 700; text-align: center;">
 							<p style="padding: 0; margin: 0;">Daily Orders Descrapancy Alert</p>
-							<p style="padding: 0; margin: 0;">Friday, November 23, 2018</p>
+							<p style="padding: 0; margin: 0; font-size: 14px;">Friday, November 23, 2018</p>
 						</td>
-						<td style="vertical-align: top; padding: 20px; width: 50px; font-size: 0;">
+						<td style="vertical-align: top; padding: 20px 10px 20px 5px; width: 50px; font-size: 0;">
 							<img src="img/ordermagic-mail-logo.png" alt="Wireless" style="width: 50px;" width="50">
 						</td>
 					</tr>
@@ -26,20 +31,20 @@
 		</tr>
 		{% if list %}
 			<tr>
-				<td style="padding: 30px 30px 20px; margin: 0; background: #fff;">
-					<table style="table-layout: fixed; margin: 0; border-collapse: collapse; border-spacing: 0; width: 100%;">
+				<td style="padding: 30px 10px 20px; margin: 0; background: #fff;">
+					<table border="0" cellspacing="0" cellpadding="0" style="table-layout: fixed; margin: 0; border-collapse: collapse; border-spacing: 0; width: 100%;">
 						<tr>
 							{% for item in list %}
-								<td style="text-align: center;">
-									<p style="padding: 0; margin: 0 0 15px; font-size: 20px; font-weight: 700;">{{item.title}}</p>
-									<div style="margin: 0 auto; border-bottom: 10px solid {{item.color}}; width: 80px; color: {{item.textColor}}; font-size: 48px; font-weight: 700;">{{item.value}}</div>
+								<td style="width: 33.33%; text-align: center;">
+									<p style="padding: 0; margin: 0 0 15px; font-size: 14px; font-weight: 700;">{{item.title}}</p>
+									<div style="margin: 0 auto; border-bottom: 10px solid {{item.color}}; width: 80px; color: {{item.textColor or 'black'}}; font-size: 48px; font-weight: 700;">{{item.value}}</div>
 								</td>
 							{% endfor %}
 						</tr>
 					</table>
-					<table style="table-layout: fixed; margin: 0; border-collapse: collapse; border-spacing: 0; width: 100%;">
+					<table border="0" cellspacing="0" cellpadding="0" style="table-layout: fixed; margin: 0; border-collapse: collapse; border-spacing: 0; width: 100%;">
 						<tr>
-							<td style="padding-top: 20px; color: {{scoreColor}}; font-size: 20px; font-weight: 700; text-align: center;">{{score}}</td>
+							<td style="padding-top: 20px; color: {{scoreColor}}; font-size: 18px; font-weight: 700; text-align: center;">{{score}}</td>
 						</tr>
 					</table>
 				</td>
@@ -48,7 +53,7 @@
 		<tr>
 			<td style="padding: 0; background: #fff; font-size: 16px; font-weight: 700;">
 				{% for item in info %}
-					<table style="table-layout: fixed; margin: 0; border-collapse: collapse; border-spacing: 0; width: 100%; color: #fff; background: {{item.background}};">
+					<table border="0" cellspacing="0" cellpadding="0" style="table-layout: fixed; margin: 0; border-collapse: collapse; border-spacing: 0; width: 100%; color: #fff; background: {{item.background}};">
 						<tr>
 							<td style="vertical-align: middle; padding: 13px; width: 24px; font-size: 0;">
 								{% if item.icon %}
@@ -61,26 +66,27 @@
 					{% if item.orders %}
 						{% for order in item.orders %}
 							<!-- begin orders info -->
-							<table style="table-layout: fixed; margin: 0; border-collapse: collapse; border-spacing: 0; width: 100%; background: #e8e8e8;">
+							<table border="0" cellspacing="0" cellpadding="0" style="table-layout: fixed; margin: 0; border-collapse: collapse; border-spacing: 0; width: 100%; background: #e8e8e8; font-size: 13px; -ms-word-break: break-word;
+							word-break: break-word;">
 								<tr>
-									<td style="padding: 13px; color: #3893d3;">{{order.main[0].text | safe}}</td>
-									<td style="padding: 13px;">{{order.main[1].text | safe}}</td>
-									<td style="padding: 13px;">{{order.main[2].text | safe}}</td>
+									<td style="padding: 13px; width: 33.3%; color: #3893d3;">{{order.main[0].text | safe}}</td>
+									<td style="padding: 13px; width: 33.3%;">{{order.main[1].text | safe}}</td>
+									<td style="padding: 13px; width: 33.3%;">{{order.main[2].text | safe}}</td>
 								</tr>
 							</table>
-							<table style="table-layout: fixed; margin: 15px 0; border-collapse: collapse; border-spacing: 0; width: 100%;">
+							<table border="0" cellspacing="0" cellpadding="0" style="table-layout: fixed; margin: 15px 0; border-collapse: collapse; border-spacing: 0; width: 100%;">
 								{% if order.headings %}
 									<tr>
-										<td style="padding: 2px 5px 2px 50px;"></td>
-										<td style="padding: 2px 5px 2px;text-align: center;">Idoo</td>
-										<td style="padding: 2px 5px 2px;text-align: center;">Wireless Standard</td>
+										<td style="vertical-align: top; padding: 2px 5px 2px 13px; width: 33.3%;"></td>
+										<td style="vertical-align: top; padding: 2px 5px 2px; width: 33.3%;text-align: center;">Idoo</td>
+										<td style="vertical-align: top; padding: 2px 5px 2px; width: 33.3%;text-align: center;">Wireless Standard</td>
 									</tr>
 								{% endif %}
 								{% for item in order.table %}
 									<tr>
-										<td style="padding: 2px 5px 2px 50px;">{{item[0].text | safe}}</td>
-										<td style="padding: 2px 5px;{% if item[1].color %} color: {{item[1].color}};{% endif %} text-align: center;">{{item[1].text | safe}}</td>
-										<td style="padding: 2px 5px;{% if item[2].color %} color: {{item[2].color}};{% endif %} text-align: center;">{{item[2].text | safe}}</td>
+										<td style="vertical-align: top; padding: 2px 5px 2px 13px; width: 33.3%;">{{item[0].text | safe}}</td>
+										<td style="vertical-align: top; padding: 2px 5px; width: 33.3%;{% if item[1].color %} color: {{item[1].color}};{% endif %} text-align: center;">{{item[1].text | safe}}</td>
+										<td style="vertical-align: top; padding: 2px 5px; width: 33.3%;{% if item[2].color %} color: {{item[2].color}};{% endif %} text-align: center;">{{item[2].text | safe}}</td>
 									</tr>
 								{% endfor %}
 							</table>
@@ -89,7 +95,7 @@
 					{% endif %}
 					{% for item in item.list %}
 						{% if item.header %}
-							<table style="table-layout: fixed; margin: 0; border-collapse: collapse; border-spacing: 0; width: 100%; background: #e8e8e8;">
+							<table border="0" cellspacing="0" cellpadding="0" style="table-layout: fixed; margin: 0; border-collapse: collapse; border-spacing: 0; width: 100%; background: #e8e8e8;">
 								<tr>
 									<td style="padding: 15px; color: #3893d3;">{{item.header[0].text}}</td>
 									<td style="padding: 15px; text-align: center;">{{item.header[1].text}}</td>
@@ -97,7 +103,7 @@
 								</tr>
 							</table>
 						{% else %}
-							<table style="table-layout: fixed; margin: 15px 0 {{item.marginBottom}}; border-collapse: collapse; border-spacing: 0; width: 100%;">
+							<table border="0" cellspacing="0" cellpadding="0" style="table-layout: fixed; margin: 15px 0 {{item.marginBottom}}; border-collapse: collapse; border-spacing: 0; width: 100%;">
 								{% for item in item.body %}
 									<tr>
 										<td style="padding-left: 50px; {% if item.body[0].color %}color: {{item[0].color}};{% endif %}">{{item[0].text | safe}}</td>
@@ -109,7 +115,7 @@
 						{% endif %}
 					{% endfor %}
 					{% if item.description %}
-						<table style="table-layout: fixed; margin: 10px 0; border-collapse: collapse; border-spacing: 0; width: 100%; font-weight: 400;">
+						<table border="0" cellspacing="0" cellpadding="0" style="table-layout: fixed; margin: 10px 0; border-collapse: collapse; border-spacing: 0; width: 100%; font-weight: 400;">
 							{% for item in item.description %}
 								<tr>
 									<td style="padding: 10px 30px 10px 40px;">{{item | safe}}</td>
@@ -118,7 +124,7 @@
 						</table>
 					{% endif %}
 					{% if item.text %}
-						<table style="table-layout: fixed; margin: 10px 0; border-collapse: collapse; border-spacing: 0; width: 100%; font-size: 20px; font-weight: 400; text-align: center;">
+						<table border="0" cellspacing="0" cellpadding="0" style="table-layout: fixed; margin: 10px 0; border-collapse: collapse; border-spacing: 0; width: 100%; font-size: 20px; font-weight: 400; text-align: center;">
 							<tr>
 								<td style="padding: 10px 30px 10px;">{{item.text | safe}}</td>
 							</tr>
@@ -129,7 +135,7 @@
 		</tr>
 		<tr>
 			<td style="padding: 0 20px; background: #e8e8e8;">
-				<table style="table-layout: fixed; margin: 0; border-collapse: collapse; border-spacing: 0; width: 100%; font-size: 16px; font-weight: 400; text-align: center;">
+				<table border="0" cellspacing="0" cellpadding="0" style="table-layout: fixed; margin: 0; border-collapse: collapse; border-spacing: 0; width: 100%; font-size: 14px; font-weight: 400; text-align: center;">
 					<tr>
 						<td style="padding: 15px;">BTB Soft Inc</td>
 						<td style="padding: 15px;">
