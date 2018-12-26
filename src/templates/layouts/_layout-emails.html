@@ -88,6 +88,17 @@
 										<td style="vertical-align: top; padding: 2px 5px; width: 33.3%;{% if item[1].color %} color: {{item[1].color}};{% endif %} text-align: center;">{{item[1].text | safe}}</td>
 										<td style="vertical-align: top; padding: 2px 5px; width: 33.3%;{% if item[2].color %} color: {{item[2].color}};{% endif %} text-align: center;">{{item[2].text | safe}}</td>
 									</tr>
+									{% if item.length == 4 %}
+										<tr>
+											<td style="vertical-align: top; padding: 2px 5px 2px 13px; width: 33.3%;"></td>
+											<td style="vertical-align: top; padding: 2px 5px; width: 33.3%; text-align: center;">{{item[1].text | safe}}</td>
+											<td style="vertical-align: top; padding: 2px 5px; width: 33.3%; text-align: center;">{{item[2].text | safe}}</td>
+										</tr>
+										<tr>
+											<td style="vertical-align: top; padding: 2px 5px 2px 13px; width: 33.3%;"></td>
+											<td colspan="2" style="vertical-align: top; padding: 2px 5px 2px 13px; width: 66.7%; font-size: 14px; font-weight: 400;">{{item[3].text}}</td>
+										</tr>
+									{% endif %}
 								{% endfor %}
 							</table>
 							<!-- end orders info -->
