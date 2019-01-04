@@ -1,0 +1,54 @@
+.tooltipster
+  &-top
+    .tooltipster
+      &-arrow
+        top: 100%
+        margin-top: -8px
+  &-bottom
+    .tooltipster
+      &-arrow
+        bottom: 100%
+        margin-bottom: -8px
+  &-left
+    .tooltipster
+      &-arrow
+        left: 100%
+        margin-left: -8px
+  &-right
+    .tooltipster
+      &-arrow
+        right: 100%
+        margin-right: -8px
+  &-base
+    position: absolute
+  &-box
+    padding: 12px
+    border-radius: 4px
+    color: $darkGray
+    background: $white
+    box-shadow: 0 2px 7px 1px rgba($black, 0.1)
+    font-size: 14px
+  &-arrow
+    position: absolute
+    width: 14px
+    height: 14px
+    &:before,
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      transform: rotate(45deg)
+    &:before
+      z-index: -1
+      box-shadow: 0 2px 7px 1px rgba($black, 0.1)
+    &:after
+      z-index: 1
+      background: $white
+@keyframes tooltipFade
+  0%
+    opacity: 0
+  100%
+    opacity: 1

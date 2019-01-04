@@ -80,9 +80,13 @@
 												{
 													market: 'New York',
 													username: 'ADickenson'
+												},
+												{
+													market: 'New York',
+													username: 'ADickenson'
 												}
 											] %}
-												<div class="table__tr {% if loop.last %}is-readonly{% endif %} {% if loop.last %}is-active{% endif %}" data-table-row="{{loop.index}}">
+												<div class="table__tr {% if loop.index == 2 %}is-disabled{% endif %} {% if loop.last %}is-readonly{% endif %} {% if loop.last %}is-active{% endif %} js-tooltip" title="You don't have Order Magic permissions change credentials to this market" data-table-row="{{loop.index}}">
 													<div class="table__td" data-column="checkbox" data-title="Qpay payment:">
 														{{mixins.checkbox({ classList: 'table__checkbox' })}}
 													</div>

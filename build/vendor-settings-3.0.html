@@ -235,7 +235,7 @@
                         </div>
                         <div class="table__tbody" data-scrollbar>
                           <div class="table__tbody-in" data-table-slider>
-                            <div class="table__tr  " data-table-row="1">
+                            <div class="table__tr    js-tooltip" title="You don't have Order Magic permissions change credentials to this market" data-table-row="1">
                               <div class="table__td" data-column="checkbox" data-title="Qpay payment:">
                                 <label class="checkbox table__checkbox">
                                   <input type="checkbox">
@@ -302,7 +302,7 @@
                                 </div>
                               </div>
                             </div>
-                            <div class="table__tr  " data-table-row="2">
+                            <div class="table__tr is-disabled   js-tooltip" title="You don't have Order Magic permissions change credentials to this market" data-table-row="2">
                               <div class="table__td" data-column="checkbox" data-title="Qpay payment:">
                                 <label class="checkbox table__checkbox">
                                   <input type="checkbox">
@@ -369,7 +369,7 @@
                                 </div>
                               </div>
                             </div>
-                            <div class="table__tr is-readonly is-active" data-table-row="3">
+                            <div class="table__tr    js-tooltip" title="You don't have Order Magic permissions change credentials to this market" data-table-row="3">
                               <div class="table__td" data-column="checkbox" data-title="Qpay payment:">
                                 <label class="checkbox table__checkbox">
                                   <input type="checkbox">
@@ -395,6 +395,73 @@
                               </div>
                               <div class="table__td" data-column="password" data-title="Password:">
                                 <div class="table__text">Pass3</div>
+                                <div class="table__field js-toggle-password">
+                                  <button type="button" class="btn-toggle table__toggle-password js-toggle-password-control">
+                                    <svg class="icon icon-eye-open btn-toggle__visible">
+                                      <use xlink:href="img/sprite.svg#icon-eye-open"></use>
+                                    </svg>
+                                    <svg class="icon icon-eye-close btn-toggle__hidden">
+                                      <use xlink:href="img/sprite.svg#icon-eye-close"></use>
+                                    </svg>
+                                  </button>
+                                  <input type="password" class="input input_sm table__input js-toggle-password-input" placeholder="Password">
+                                </div>
+                              </div>
+                              <div class="table__td" data-column="edit">
+                                <button type="button" class="table__btn table__edit" data-table-edit>
+                                  <svg class="icon icon-edit ">
+                                    <use xlink:href="img/sprite.svg#icon-edit"></use>
+                                  </svg>
+                                </button>
+                                <button type="button" class="table__btn table__close" data-table-edit>
+                                  <svg class="icon icon-close ">
+                                    <use xlink:href="img/sprite.svg#icon-close"></use>
+                                  </svg>
+                                </button>
+                                <div class="table__btns">
+                                  <div class="table__btns-col">
+                                    <button type="button" class="table__btn table__save" data-table-submit>
+                                      <svg class="icon icon-check ">
+                                        <use xlink:href="img/sprite.svg#icon-check"></use>
+                                      </svg>
+                                    </button>
+                                  </div>
+                                  <div class="table__btns-col">
+                                    <button type="button" class="table__btn table__cancel" data-table-edit>
+                                      <svg class="icon icon-undo ">
+                                        <use xlink:href="img/sprite.svg#icon-undo"></use>
+                                      </svg>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="table__tr  is-readonly is-active js-tooltip" title="You don't have Order Magic permissions change credentials to this market" data-table-row="4">
+                              <div class="table__td" data-column="checkbox" data-title="Qpay payment:">
+                                <label class="checkbox table__checkbox">
+                                  <input type="checkbox">
+                                  <span class="checkbox__icon">
+                                    <svg class="icon icon-check ">
+                                      <use xlink:href="img/sprite.svg#icon-check"></use>
+                                    </svg>
+                                  </span>
+                                </label>
+                              </div>
+                              <div class="table__td" data-column="market" data-title="Market:">
+                                <div class="table__text">New York</div>
+                                <div class="table__field">
+                                  <input type="text" class="input input_sm table__input" value="New York" readonly>
+                                </div>
+                              </div>
+                              <div class="table__td" data-column="login" data-title="Login:">
+                                <div class="table__text">ADickenson</div>
+                                <div class="table__field">
+                                  <input type="text" class="input input_sm table__input" placeholder="User Name">
+                                  <div class="error-message table__error-message is-open">Lorem ipsum dolor sit amet.</div>
+                                </div>
+                              </div>
+                              <div class="table__td" data-column="password" data-title="Password:">
+                                <div class="table__text">Pass4</div>
                                 <div class="table__field js-toggle-password">
                                   <button type="button" class="btn-toggle table__toggle-password js-toggle-password-control">
                                     <svg class="icon icon-eye-open btn-toggle__visible">
