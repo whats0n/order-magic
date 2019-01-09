@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Purchase Order</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+  </head>
+
+  <body class="is-metro">
+    <!-- begin header -->
+    <header class="header">
+      <button class="header__back">
+        <svg class="icon icon-arrow-left ">
+          <use xlink:href="img/spriteHeader.svg#icon-arrow-left"></use>
+        </svg>
+      </button>
+      <button class="header__btn-help">
+        <svg class="icon icon-question-option ">
+          <use xlink:href="img/spriteHeader.svg#icon-question-option"></use>
+        </svg>
+      </button>
+      <div class="header__inner">
+        <div class="header__title">Purchase Order</div>
+      </div>
+    </header>
+    <!-- end header -->
+    <!-- BEGIN content -->
+    <div class="container">
+      <form action="/" class="form">
+        <div class="form-group ">
+          <div class="form-group__label"><span>File:</span></div>
+          <button class="btn btn_wide form-group__btn">Upload</button>
+          <div class="upload form-group__field">
+            <label class="file upload__file">
+              <input type="file" class="file__input">
+              <span class="file__field">Choose...</span>
+            </label>
+          </div>
+        </div>
+        <div class="form__description form__description_lg">
+          <p>PDF and Excel formats are supported</p>
+          <p>Excel template is available here. <a href="#">link</a></p>
+        </div>
+      </form>
+    </div>
+    <!-- END content -->
+    <!-- begin footer -->
+    <footer class="footer">
+      <ul class="footer__list">
+        <li class="footer__item">&copy BTB Soft, Inc</li>
+        <li class="footer__item">
+          <a href="https://b2bsoft.com/" class="footer__link">www.b2bsoft.com</a>
+        </li>
+      </ul>
+    </footer>
+    <!-- end footer -->
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
+  </body>
+
+</html>
