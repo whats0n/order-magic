@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Purchase Order</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+  </head>
+
+  <body class="is-metro">
+    <!-- begin header -->
+    <header class="header">
+      <button class="header__back">
+        <svg class="icon icon-arrow-left ">
+          <use xlink:href="img/spriteHeader.svg#icon-arrow-left"></use>
+        </svg>
+      </button>
+      <button class="header__btn-help">
+        <svg class="icon icon-question-option ">
+          <use xlink:href="img/spriteHeader.svg#icon-question-option"></use>
+        </svg>
+      </button>
+      <div class="header__inner">
+        <div class="header__title">Purchase Order</div>
+      </div>
+    </header>
+    <!-- end header -->
+    <!-- BEGIN content -->
+    <div class="container">
+      <form action="/" class="form">
+        <div class="form-group ">
+          <div class="form-group__label"><span>File:</span></div>
+          <button class="btn btn_wide form-group__btn">Upload</button>
+          <div class="upload form-group__field">
+            <label class="file upload__file">
+              <input type="file" class="file__input">
+              <span class="file__field">Choose...</span>
+            </label>
+          </div>
+        </div>
+        <div class="form-group form-group_vertical-center">
+          <div class="form-group__label"><span>Order summary:</span></div>
+          <button class="btn btn_wide form-group__btn">Preview</button>
+          <div class="form-group__field">
+            <div class="form-group__value">
+              <p>Total items: 140</p>
+              <p>Total SKU: 30</p>
+              <p>Total amount: $700.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="form-group ">
+          <div class="form-group__label "><span>Vendor:</span></div>
+          <div class="form-group__field">
+            <div class="select " data-select>
+              <div class="select__header">
+                <svg class="icon icon-angle-down select__arrow">
+                  <use xlink:href="img/sprite.svg#icon-angle-down"></use>
+                </svg>
+                <div class="select__value" data-select-value></div>
+              </div>
+              <div class="select__body">
+                <ul class="select__list">
+                  <li class="select__option" data-select-option>Main Vendor</li>
+                  <li class="select__option" data-select-option>Not Main Vendor</li>
+                  <li class="select__option" data-select-option>My Awesome Vendor</li>
+                  <li class="select__option" data-select-option>Other Vendor</li>
+                  <li class="select__option" data-select-option>Vendor with longlonglonglonglonglonglong name</li>
+                  <li class="select__option" data-select-option>Some Vendor</li>
+                  <li class="select__option" data-select-option>What is this?</li>
+                  <li class="select__option" data-select-option>Stuff</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group ">
+          <div class="form-group__label "><span>Reference #:</span></div>
+          <div class="form-group__field">
+            <input type="text" class="input form-group__input">
+          </div>
+        </div>
+        <div class="form-group ">
+          <div class="form-group__label "><span>Store:</span></div>
+          <div class="form-group__field">
+            <div class="select " data-select>
+              <div class="select__header">
+                <svg class="icon icon-angle-down select__arrow">
+                  <use xlink:href="img/sprite.svg#icon-angle-down"></use>
+                </svg>
+                <div class="select__value" data-select-value></div>
+              </div>
+              <div class="select__body">
+                <ul class="select__list">
+                  <li class="select__option" data-select-option>Main Store</li>
+                  <li class="select__option" data-select-option>Not Main Store</li>
+                  <li class="select__option" data-select-option>My Awesome Store</li>
+                  <li class="select__option" data-select-option>Other Store</li>
+                  <li class="select__option" data-select-option>Store with longlonglonglonglonglonglong name</li>
+                  <li class="select__option" data-select-option>Some Store</li>
+                  <li class="select__option" data-select-option>What is this?</li>
+                  <li class="select__option" data-select-option>Stuff</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form__submit">
+          <button class="btn btn_wide form__btn" type="submit">Send</button>
+        </div>
+      </form>
+    </div>
+    <!-- END content -->
+    <!-- begin footer -->
+    <footer class="footer">
+      <ul class="footer__list">
+        <li class="footer__item">&copy BTB Soft, Inc</li>
+        <li class="footer__item">
+          <a href="https://b2bsoft.com/" class="footer__link">www.b2bsoft.com</a>
+        </li>
+      </ul>
+    </footer>
+    <!-- end footer -->
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
+  </body>
+
+</html>

@@ -1,0 +1,30 @@
+.file
+	&.is-error
+		.file__field
+			border-color: $red
+	&__input
+		display: none
+		&:disabled,
+		&[readonly]
+			~ .file__field
+				border-color: lighten($darkGray, 50%)
+				background: lighten($darkGray, 75%)
+				cursor: not-allowed
+	&__field
+		display: block
+		padding: 0 12px
+		border: 1px solid rgb(204, 204, 204)
+		border-radius: 0
+		width: 100%
+		height: 40px
+		background: $white
+		box-shadow: none
+		+f(16px, 400, 38px)
+		+text-overflow
+		appearance: none
+		transition: border-color 0.25s
+		cursor: pointer
+		&:focus
+			border-color: $blue
+			+metro 
+				border-color: $metroSecondary

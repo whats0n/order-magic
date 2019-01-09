@@ -17,6 +17,8 @@ PageList:
 - file: login.html
 - file: vendor-settings-2.0.html
 - file: vendor-settings-3.0.html
+- file: purchase-order-upload.html
+- file: purchase-order-upload-full.html
 
 - file: home-metro.html
 - file: home-v2-metro.html
@@ -33,6 +35,8 @@ PageList:
 - file: login-metro.html
 - file: vendor-settings-2.0-metro.html
 - file: vendor-settings-3.0-metro.html
+- file: purchase-order-upload-metro.html
+- file: purchase-order-upload-full-metro.html
 
 - file: email-simple.html
 - file: email-error.html

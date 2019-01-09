@@ -1,0 +1,64 @@
+<form action="/" class="form">
+	<div class="form-group {{props.classList}}">
+		<div class="form-group__label"><span>File:</span></div>
+		<button class="btn btn_wide form-group__btn">Upload</button>
+		<div class="upload form-group__field">
+			<label class="file upload__file">
+				<input type="file" class="file__input">
+				<span class="file__field">Choose...</span>
+			</label>
+		</div>
+	</div>
+	<div class="form-group form-group_vertical-center">
+		<div class="form-group__label"><span>Order summary:</span></div>
+		<button class="btn btn_wide form-group__btn">Preview</button>
+		<div class="form-group__field">
+				<div class="form-group__value">
+					{% for item in [
+						'Total items: 140',
+						'Total SKU: 30',
+						'Total amount: $700.00'
+					] %}
+						<p>{{item | safe}}</p>
+					{% endfor %}
+				</div>
+		</div>
+	</div>
+	{{mixins.group({
+		label: 'Vendor',
+		select: {
+			options: [
+				'Main Vendor',
+				'Not Main Vendor',
+				'My Awesome Vendor',
+				'Other Vendor',
+				'Vendor with longlonglonglonglonglonglong name',
+				'Some Vendor',
+				'What is this?',
+				'Stuff'
+			]
+		}
+	})}}
+	{{mixins.group({
+		label: 'Reference #',
+		input: true
+	})}}
+	{{mixins.group({
+		label: 'Store',
+		select: {
+			options: [
+				'Main Store',
+				'Not Main Store',
+				'My Awesome Store',
+				'Other Store',
+				'Store with longlonglonglonglonglonglong name',
+				'Some Store',
+				'What is this?',
+				'Stuff'
+			]
+		}
+	})}}
+	<div class="form__submit">
+		<button class="btn btn_wide form__btn" type="submit">Send</button>
+	</div>
+</form>
