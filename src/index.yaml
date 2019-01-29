@@ -39,6 +39,7 @@ PageList:
 - file: purchase-order-upload-full-metro.html
 
 - file: email-simple.html
+- file: email-simple-update.html
 - file: email-error.html
 - file: email-empty.html
 - file: email-small.html
