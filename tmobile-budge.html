@@ -3,204 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<link rel="stylesheet" href="jquery.multiselect.css">
 	<link rel="stylesheet" href="idoo.css">
-	<!--<style>
-		.simple-badge {
-			position: absolute;
-			top: 5px;
-			right: 5px;
-			box-sizing: border-box;
-			padding: 7px;
-			border-radius: 3px;
-			width: 100px;
-			color: #000;
-			background: #fff;
-			box-shadow: 0 1px 3px 1px rgba(0,0,0,0.15);
-			font-size: 13px;
-			line-height: 1.3;
-		}
-
-		.simple-badge * {
-			box-sizing: border-box;
-		}
-
-		.simple-badge_purple {
-			color: #fff;
-			background: #141547;
-		}
-
-		.simple-badge__spinner {
-			position: relative;
-			margin: 0 auto;
-			border-radius: 50%;
-			width: 1em;
-			height: 1em;
-			font-size: 32px;
-			animation: rodar 1.5s linear infinite;
-		}
-
-		.simple-badge__spinner::before {
-			position: absolute;
-			content: "";
-			width: 100%;
-			height: 100%;
-			border-radius: 50%;
-			box-shadow: inset -3px 0 0 3px currentColor;
-			clip: rect(0, 1em, 0.5em, 0);
-			animation: rotator 1s infinite linear;
-		}
-
-		@keyframes rotator {
-			0% {
-				transform: rotate(-180deg);
-				box-shadow: inset -3px 0 0 3px currentColor;
-			}
-			50% {
-				transform: rotate(0deg);
-				box-shadow: inset -1px 0 0 1px currentColor;
-			}
-			100% {
-				transform: rotate(180deg);
-				box-shadow: inset -3px 0 0 3px currentColor;
-			}
-		}
-
-		.box {
-			position: relative;
-			display: inline-block;
-			vertical-align: top;
-			box-sizing: border-box;
-			padding: 10px;
-			margin-bottom: 10px;
-			border: 1px solid black;
-			width: 200px;
-			height: 200px;
-		}
-
-		.box_lg {
-			width: 100%;
-			height: auto;
-		}
-
-		.badge {
-			position: relative;
-			display: inline-block;
-			vertical-align: top;
-			box-sizing: border-box;
-			padding: 20px 30px 20px 20px;
-			border-radius: 3px;
-			max-width: 700px;
-			color: #000;
-			background: #fff;
-			box-shadow: 0 1px 3px 1px rgba(0,0,0,0.15);
-		}
-
-		.badge * {
-			box-sizing: border-box;
-		}
-
-		.badge_purple {
-			color: #fff;
-			background: #141547;
-		}
-
-		.badge__close {
-			position: absolute;
-			top: 0;
-			right: 0;
-			border: none;
-			outline: none;
-			width: 20px;
-			height: 20px;
-			color: currentColor;
-			background: none;
-			cursor: pointer;
-		}
-
-		.badge__close:before,
-		.badge__close:after {
-			content: '';
-			position: absolute;
-			top: 20%;
-			border-radius: 1px;
-			width: 86%;
-			height: 2px;
-			background: currentColor;
-		}
-
-		.badge__close:before {
-			left: 20%;
-			transform: rotate(45deg);
-			transform-origin: left center;
-		}
-
-		.badge__close:after {
-			right: 20%;
-			transform: rotate(-45deg);
-			transform-origin: right center;
-		}
-
-		.badge__title {
-			font-size: 16px;
-			line-height: 1.3;
-		}
-
-		.badge__group:not(:last-child) {
-			margin-bottom: 10px;
-		}
-
-		.badge__group:after {
-			content: '';
-			display: block;
-			clear: both;
-		}
-
-		.badge__label {
-			float: left;
-			padding: 5px 10px 5px 0;
-			width: 140px;
-			font-size: 16px;
-			line-height: 1.3;
-		}
-
-		.badge__field {
-			float: left;
-			width: 240px;
-		}
-
-		.badge__select-wrapper {
-			position: relative;
-		}
-
-		.badge__select-wrapper:before {
-			content: '';
-			position: absolute;
-			top: 50%;
-			right: 10px;
-			margin-top: -3px;
-			border-width: 6px 4px 0;
-			border-color: #000 rgba(255,255,255,0) rgba(255,255,255,0);
-			border-style: solid;
-			pointer-events: none;
-		}
-
-		.badge__select {
-			display: block;
-			padding: 0 30px 0 10px;
-			border: 1px solid #999;
-			border-radius: 3px;
-			outline: none;
-			width: 100%;
-			height: 30px;
-			color: #000;
-			background: #fff;
-			font-family: inherit;
-			font-size: 16px;
-			line-height: normal;
-			-webkit-appearance: none;
-			appearance: none;
-		}
-	</style>-->
 	<style>
 		.badge {
 			position: relative;
@@ -298,6 +102,45 @@
 				</div>
 			</div>
 		</div>
+		<br>
+		<br>
+		<div class="badge badge_purple badge_inline">
+			<button class="badge__close"></button>
+			<div class="badge__group">
+				<div class="badge__group-item">
+					<div class="badge__label">MetroPCS market:</div>
+					<div class="badge__field">
+						<div class="badge__select-wrapper">
+							<select class="badge__select">
+								<option value="Market 1">Market 1</option>
+								<option value="Market 2">Market 2</option>
+								<option value="Market 3">Market 3</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="badge__group-item">
+					<div class="badge__label">Store:</div>
+					<div class="badge__field">
+						<div class="multiselect js-multiselect-parent">
+							<select class="js-multiselect" multiple id="store-multi" data-placeholder="Select stores">
+								<option value="Store 1">Store 1</option>
+								<option value="Store 2">Store 2</option>
+								<option value="Store 3">Store 3</option>
+								<option value="Store 4">Store 4</option>
+								<option value="Store 5">Store 5</option>
+								<option value="Store 6">Store 6</option>
+								<option value="Store 7">Store 7</option>
+								<option value="Store 8">Store 8</option>
+								<option value="Store 9">Store 9</option>
+								<option value="Store 10">Store 10</option>
+								<option value="Store 11">Store 11</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="box">
 		<div class="simple-badge">
@@ -348,5 +191,42 @@
 			<div class="simple-badge__spinner"></div>
 		</div>
 	</div>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="jquery.multiselect.js"></script>
+	<script>
+		Array
+			.prototype
+			.forEach
+			.call(document.querySelectorAll('.js-multiselect'), select => {
+				// const id = select.getAttribute('id')
+				// if (id !== undefined) {
+				// 	const parent = select.parentNode
+				// 	const placeholder = select.getAttribute('data-placeholder')
+				// 	if (placeholder !== undefined) {
+				// 		const input = parent.querySelector('.multiselect-input')
+				// 		input.setAttribute('placeholder', placeholder)
+				// 	}
+				// }
+
+				const placeholder = select.getAttribute('data-placeholder') || ''
+				const options = Array
+					.prototype
+					.map
+					.call(select.querySelectorAll('option'), (option, index) => ({
+						id: index,
+						name: option.textContent,
+						checked: option.hasAttribute('selected')
+					}))
+				$(select).multiselect({
+					data : options,
+					showCheckbox: false,
+					minHeight: 'auto',
+					maxHeight: 200,
+					texts: {
+						placeholder: placeholder
+					}
+				})
+			})
+	</script>
 </body>
 </html>

@@ -265,3 +265,113 @@
 	-webkit-appearance: none;
 	appearance: none;
 }
+
+/*
+ * BEGIN NEW
+ */
+.ms-options-wrap {
+	position: relative;
+}
+
+.ms-options-wrap > .ms-options {
+	display: none;
+	visibility: visible;
+}
+
+.ms-options-wrap.ms-active > .ms-options {
+	display: block;
+}
+
+.ms-options-wrap > button:focus,
+.ms-options-wrap > button {
+	display: block;
+	padding: 0 30px 0 10px;
+	margin: 0;
+	border: 1px solid #999;
+	border-radius: 3px;
+	outline: none;
+	width: 100%;
+	height: 30px;
+	color: #000;
+	background: #fff;
+	font-family: inherit;
+	font-size: 16px;
+	line-height: normal;
+	cursor: pointer;
+}
+
+.ms-options-wrap > button:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	margin-top: -3px;
+	border-width: 6px 4px 0;
+	border-color: #000 rgba(255,255,255,0) rgba(255,255,255,0);
+	border-style: solid;
+	pointer-events: none;
+}
+
+.ms-options-wrap > .ms-options {
+	padding: 10px 0;
+	border: 1px solid #999;
+	border-radius: 3px;
+}
+
+.ms-options-wrap > .ms-options > ul label {
+	margin: 0;
+	border: none;
+	color: #000;
+	cursor: pointer;
+}
+
+.ms-options-wrap > .ms-options.checkbox-autofit > ul label,
+.ms-options-wrap > .ms-options.hide-checkbox > ul label {
+	position: relative;
+	padding-left: 30px;
+}
+
+.ms-options-wrap > .ms-options.checkbox-autofit > ul label:after,
+.ms-options-wrap > .ms-options.hide-checkbox > ul label:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 8px;
+	margin-top: -8px;
+	border-radius: 3px;
+	border: 1px solid #999;
+	width: 14px;
+	height: 14px;
+}
+
+.ms-options-wrap > .ms-options.checkbox-autofit > ul label:before,
+.ms-options-wrap > .ms-options.hide-checkbox > ul label:before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	margin-top: -6px;
+	width: 12px;
+	height: 12px;
+	opacity: 0;
+	background: url('img/checked.svg') no-repeat center center;
+	background-size: contain;
+}
+
+.ms-options-wrap > .ms-options.checkbox-autofit > ul .selected label:before,
+.ms-options-wrap > .ms-options.hide-checkbox > ul .selected label:before {
+	opacity: 1;
+}
+
+.ms-options-wrap > .ms-options > ul li.selected label {
+	background: none;
+}
+.ms-options-wrap > .ms-options > ul li.selected label.focused,
+.ms-options-wrap > .ms-options > ul li.selected label:hover,
+.ms-options-wrap > .ms-options > ul label.focused,
+.ms-options-wrap > .ms-options > ul label:hover {
+	background: #efefef;
+}
+/*
+ * END NEW
+ */
